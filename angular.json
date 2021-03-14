@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -122,6 +125,86 @@
             "production": {
               "devServerTarget": "ceui:serve:production"
             }
+          }
+        }
+      }
+    },
+    "core": {
+      "projectType": "library",
+      "root": "projects/core",
+      "sourceRoot": "projects/core",
+      "prefix": "ceui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/core/tsconfig.lib.json",
+            "project": "projects/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/core/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/core/test.ts",
+            "tsConfig": "projects/core/tsconfig.spec.json",
+            "karmaConfig": "projects/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/core/tsconfig.lib.json",
+              "projects/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "cdk": {
+      "projectType": "library",
+      "root": "projects/cdk",
+      "sourceRoot": "projects/cdk",
+      "prefix": "ceui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/cdk/tsconfig.lib.json",
+            "project": "projects/cdk/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cdk/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cdk/test.ts",
+            "tsConfig": "projects/cdk/tsconfig.spec.json",
+            "karmaConfig": "projects/cdk/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cdk/tsconfig.lib.json",
+              "projects/cdk/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

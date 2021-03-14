@@ -3,6 +3,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "cdk": [
+        "dist/cdk/cdk",
+        "dist/cdk"
+      ],
+      "core": [
+        "dist/core/core",
+        "dist/core"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

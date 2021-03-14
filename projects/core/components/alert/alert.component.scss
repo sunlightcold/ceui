@@ -1,0 +1,50 @@
+@import '../../styles/color';
+@import '../../styles/font';
+@import '../../styles/core';
+
+.ceui-alert {
+  font-size: $ceui-font-size;
+  border: 1px solid transparent;
+  border-radius: $ceui-border-radius;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+  &.ceui-alert-success {
+    background-color: $ceui-success-bg;
+    color: $ceui-success;
+    border-color: $ceui-success-line;
+  }
+
+  &.ceui-alert-error {
+    background-color: $ceui-error-bg;
+    color: $ceui-error;
+    border-color: $ceui-error-line;
+  }
+
+  &.ceui-alert-warning {
+    background-color: $ceui-warning-bg;
+    color: $ceui-warning;
+    border-color: $ceui-warning-line;
+  }
+
+  &.ceui-alert-primary {
+    background-color: $ceui-primary-bg;
+    color: $ceui-primary;
+    border-color: $ceui-primary-line;
+  }
+
+  >.ceui-alert-icon {
+    margin-right: 5px;
+  }
+
+  >.ceui-alert-content {
+    color: $ceui-text;
+    cursor: default;
+    width: 100%;
+  }
+
+  >.ceui-alert-close {
+    cursor: pointer;
+  }
+}

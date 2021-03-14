@@ -1,0 +1,16 @@
+$ceui-error: var(--ceui-danger, #f44336);                         // 失败、错误、告警
+$ceui-warning: var(--ceui-warning, #fac20a);                      // 警告、需注意类型提示
+$ceui-success: var(--ceui-success, #50d4ab);                      // 成功、正确
+$ceui-primary: var(--ceui-primary, #3f51b5);                      // 通知、一般提示、执行中
+
+$ceui-error-bg: var(--ceui-danger-bg, rgba(#f44336, .1));                   // 失败、错误、告警背景色
+$ceui-warning-bg: var(--ceui-warning-bg, rgba(#fac20a, .1));                // 警告、需注意类型提示背景色
+$ceui-success-bg: var(--ceui-success-bg, rgba(#50d4ab, .1));                // 成功、正确背景色
+$ceui-primary-bg: var(--ceui-primary-bg, rgba(#3f51b5, .1));                // 通知、一般提示、执行中背景色
+
+$ceui-error-line: var(--ceui-danger-line, rgba(#f44336, .5));                   // 失败、错误、告警边框颜色
+$ceui-warning-line: var(--ceui-warning-line, rgba(#fac20a, .5));                // 警告、需注意类型提示边框颜色
+$ceui-success-line: var(--ceui-success-line, rgba(#50d4ab, .5));                // 成功、正确边框颜色
+$ceui-primary-line: var(--ceui-primary-line, rgba(#3f51b5, .5));                // 通知、一般提示、执行中边框颜色
+
+$ceui-text: var(--ceui-text, #252b3a);                             // 正文字体颜色

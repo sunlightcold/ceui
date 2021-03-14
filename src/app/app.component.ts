@@ -13,7 +13,11 @@ export class AppComponent {
 
   dataSource = new CeuiDataSource(this.list);
 
-  ngModelChange(filter: string) {
+  ngModelChange(filter: string): void {
     this.dataSource.filter = filter;
+  }
+
+  onCloseEvent(): void {
+    console.log('close');
   }
 }

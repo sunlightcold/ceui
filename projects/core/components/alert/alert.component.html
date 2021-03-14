@@ -1,0 +1,7 @@
+<div *ngIf="!_hidden" class="ceui-alert ceui-alert-{{ type }}">
+  <i *ngIf="showIcon" class="ceui-alert-icon ceui-font ceui-icon-{{ type }}"></i>
+  <div class="ceui-alert-content">
+    <ng-content></ng-content>
+  </div>
+  <i *ngIf="closable" class="ceui-alert-close ceui-font ceui-icon-close" (click)="onCloseEvent()"></i>
+</div>

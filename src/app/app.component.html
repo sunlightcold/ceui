@@ -1,7 +1,15 @@
-<input type="text" [(ngModel)]="filter" (ngModelChange)="ngModelChange($event)">
+<!-- <input type="text" [(ngModel)]="filter" (ngModelChange)="ngModelChange($event)">
 
 <ul>
     <li *ngFor="let item of dataSource.connect() | async">
         {{ item.a }}
     </li>
-</ul>
+</ul> -->
+<ceui-alert type='primary'>primary</ceui-alert>
+<ceui-alert type="success">success</ceui-alert>
+<ceui-alert type="warning">warning</ceui-alert>
+<ceui-alert type="error">error</ceui-alert>
+<ceui-alert type='primary' [showIcon]="false">primary</ceui-alert>
+<ceui-alert type="success" [showIcon]="false">success</ceui-alert>
+<ceui-alert type="warning" [showIcon]="false">warning</ceui-alert>
+<ceui-alert type="error" [showIcon]="false" (closeEvent)="onCloseEvent()">error</ceui-alert>

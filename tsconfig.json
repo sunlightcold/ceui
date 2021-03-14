@@ -4,13 +4,17 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "cdk": [
-        "dist/cdk/cdk",
-        "dist/cdk"
+      "@ceui/cdk": [
+        "projects/cdk/index",
       ],
-      "core": [
-        "dist/core/core",
-        "dist/core"
+      "@ceui/cdk/*": [
+        "projects/cdk/*",
+      ],
+      "@ceui/core": [
+        "projects/core/index",
+      ],
+      "@ceui/core/*": [
+        "projects/core/*",
       ]
     },
     "outDir": "./dist/out-tsc",

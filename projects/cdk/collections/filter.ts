@@ -23,5 +23,5 @@ export function ceuiFilterObj<T>(data: T, filter: string): boolean {
  * @returns 匹配后的对象集合
  */
 export function ceuiFilterDataList<T>(data: T[], filter: string): T[] {
-  return data.filter(obj => ceuiFilterObj<T>(obj, filter));
+  return data.filter((obj) => ceuiFilterObj<T>(obj, filter));
 }

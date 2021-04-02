@@ -31,16 +31,17 @@ export class CeuiDataSource<T> {
    */
   filteredData: T[] = [];
 
-  get data() {
+  get data(): T[] {
     return this._data$.value;
   }
   set data(data: T[]) {
     this._data$.next(data);
     if (!this._renderChangesSubscription) {
+      this._updateChangeSubscription();
     }
   }
 
-  get filter() {
+  get filter(): string {
     return this._filter$.value;
   }
   set filter(value: string) {
@@ -48,7 +49,7 @@ export class CeuiDataSource<T> {
 
     // 如果未处于订阅状态，filterData 需要数据更新
     if (!this._renderChangesSubscription) {
-      this._filter$Data(this.data);
+      this._filterData(this.data);
     }
   }
 
@@ -57,12 +58,12 @@ export class CeuiDataSource<T> {
     this._updateChangeSubscription();
   }
 
-  _updateChangeSubscription() {
+  private _updateChangeSubscription(): void {
     const dataStream = this._data$;
 
     // 订阅数据更改或过滤字符串更改，获取最新的过滤数据流
     const filteredData$ = combineLatest([dataStream, this._filter$]).pipe(
-      map(([data]) => this._filter$Data(data))
+      map(([data]) => this._filterData(data))
     );
 
     this._renderChangesSubscription?.unsubscribe();
@@ -76,7 +77,7 @@ export class CeuiDataSource<T> {
    * @param data 需要过滤的集合
    * @returns 过滤后的集合
    */
-  _filter$Data(data: T[]): T[] {
+  _filterData(data: T[]): T[] {
     this.filteredData =
       this.filter == null || this.filter == ''
         ? this.data
@@ -98,7 +99,7 @@ export class CeuiDataSource<T> {
   /**
    * 解除数据流
    */
-  disconnect() {
+  disconnect(): void {
     this._renderChangesSubscription?.unsubscribe();
     this._renderChangesSubscription = null;
   }

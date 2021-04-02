@@ -1,0 +1,52 @@
+@import '../../styles/theme';
+
+// tab 对齐方式结构样式
+@mixin tab-item-wrapper($child) {
+  [ceui-align-tabs='center'] {
+    #{$child} {
+      justify-content: center;
+    }
+  }
+
+  [ceui-align-tabs='end'] {
+    #{$child} {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.ceui-tab-group {
+  position: relative;
+
+  .ceui-tab-labels {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    border-bottom: 2px solid #e3e3e3;
+    font-size: 15px;
+    font-weight: 500;
+    color: $ceui-text;
+
+    .ceui-tab-label {
+      padding: 10px 20px;
+    }
+
+    .ceui-tab-label-active {
+      color: black;
+    }
+
+    .ceui-tab-label-disabled {
+      color: $ceui-disabled-bg;
+      cursor: not-allowed;
+    }
+  }
+
+  .ceui-label-link-bar {
+    position: absolute;
+    background-color: $ceui-primary;
+    height: 2px;
+  }
+}
+
+@include tab-item-wrapper('.ceui-tab-labels');

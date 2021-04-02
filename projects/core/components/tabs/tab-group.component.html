@@ -1,0 +1,21 @@
+<div class="ceui-tab-group">
+  <div class="ceui-tab-labels">
+    <div class="ceui-tab-label"
+         ceuiTabLabelWrapper
+         *ngFor="let tab of tabComponents; let i = index;"
+         [class.ceui-tab-label-active]="tab.templateRef === selectedTabTemplateRef"
+         [class.ceui-tab-label-disabled]="tab.disabled"
+         (click)="!tab.disabled && onSelectTab(i)">
+      <div class="mat-tab-label-content">
+        <ng-template [ngIf]="tab.templateLabel">
+          <ng-container *ngTemplateOutlet="tab.templateLabel.templateRef"></ng-container>
+        </ng-template>
+
+        <ng-template [ngIf]="!tab.templateLabel">{{ tab.label }}</ng-template>
+      </div>
+    </div>
+  </div>
+  <div class="ceui-label-link-bar"
+       #linkBar></div>
+  <ng-container *ngTemplateOutlet="selectedTabTemplateRef"></ng-container>
+</div>

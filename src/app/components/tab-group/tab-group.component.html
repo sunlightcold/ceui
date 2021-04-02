@@ -1,0 +1,33 @@
+<div style="width: 600px;">
+  <ceui-tab-group ceui-align-tabs="center"
+                  #tabGroup
+                  [selectedIndex]="selectedIndex"
+                  [canTabActivate]="canTabActivate"
+                  (selectedIndexChange)="onSelectedIndexChange($event)">
+    <ceui-tab>
+      <ng-template ceui-tab-label>
+        <h1>First</h1>
+      </ng-template>
+      <ul>
+        <li>测试1 1</li>
+        <li>测试1 2</li>
+        <li>测试1 3</li>
+      </ul>
+    </ceui-tab>
+    <ceui-tab label="测试2">
+      <ul>
+        <li>测试2 1</li>
+        <li>测试2 2</li>
+        <li>测试2 3</li>
+      </ul>
+    </ceui-tab>
+    <ceui-tab label="测试3">
+      <ul>
+        <li>测试3 1</li>
+        <li>测试3 2</li>
+        <li>测试3 3</li>
+      </ul>
+    </ceui-tab>
+  </ceui-tab-group>
+  <button (click)="selectTab()">点击</button>
+</div>

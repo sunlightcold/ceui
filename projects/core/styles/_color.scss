@@ -7,6 +7,7 @@ $ceui-error-bg: var(--ceui-danger-bg, rgba(#f44336, .1));                   // �
 $ceui-warning-bg: var(--ceui-warning-bg, rgba(#fac20a, .1));                // 警告、需注意类型提示背景色
 $ceui-success-bg: var(--ceui-success-bg, rgba(#50d4ab, .1));                // 成功、正确背景色
 $ceui-primary-bg: var(--ceui-primary-bg, rgba(#3f51b5, .1));                // 通知、一般提示、执行中背景色
+$ceui-disabled-bg: var(--ceui-disabled-bg, #c7c7c7);                        // 禁用背景色
 
 $ceui-error-line: var(--ceui-danger-line, rgba(#f44336, .5));                   // 失败、错误、告警边框颜色
 $ceui-warning-line: var(--ceui-warning-line, rgba(#fac20a, .5));                // 警告、需注意类型提示边框颜色

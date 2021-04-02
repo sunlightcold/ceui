@@ -84,7 +84,11 @@
     },
     "typedef": [
       true,
-      "call-signature"
+      "call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration"
     ],
     "typedef-whitespace": {
       "options": [

@@ -77,9 +77,9 @@ export class CeuiDataSource<T> {
    * @param data 需要过滤的集合
    * @returns 过滤后的集合
    */
-  _filterData(data: T[]): T[] {
+  private _filterData(data: T[]): T[] {
     this.filteredData =
-      this.filter == null || this.filter == ''
+      this.filter == null || this.filter === ''
         ? this.data
         : ceuiFilterDataList<T>(data, this.filter);
     return this.filteredData;

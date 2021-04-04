@@ -8,9 +8,9 @@ import { ThemePalette } from '@ceui/core/types';
 })
 export class AlertComponent {
   /**
-   * 可关闭的，显示关闭按钮，默认 true
+   * 可关闭的，显示关闭按钮，默认 false
    */
-  @Input() closable = true;
+  @Input() closable = false;
 
   /**
    * alert 主题类型

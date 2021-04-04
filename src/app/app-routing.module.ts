@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlertComponent } from './components/alert/alert.component';
-import { TabGroupComponent } from './components/tab-group/tab-group.component';
 
 const routes: Routes = [
   {
     path: 'alert',
-    component: AlertComponent,
+    loadChildren: () => import('./modules/alert/alert.module').then(module => module.AlertModule),
   },
   {
     path: 'tabs',
-    component: TabGroupComponent,
+    loadChildren: () => import('./modules/tabs/tabs.module').then(module => module.TabsModule),
+  },
+  {
+    path: 'card',
+    loadChildren: () => import('./modules/card/card.module').then(module => module.CardModule),
+  },
+  {
+    path: '',
+    redirectTo: 'card',
+    pathMatch: 'full'
   }
 ];
 

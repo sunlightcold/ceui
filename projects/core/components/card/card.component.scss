@@ -1,0 +1,29 @@
+@import '../../styles/theme';
+
+$ceui-card-header-bg: #EDEFF1;        // card 头部背景色
+$ceui-card-header-height: 38px;         // card 头部高度
+$ceui-card-header-padding: 10px;        // card header padding
+$ceui-card-content-padding: 20px 10px;        // card header padding
+
+:host {
+  display: inline-block;
+}
+
+.ceui-card {
+  border-radius: $ceui-border-radius;
+  box-shadow: $ceui-box-shadow;
+
+  >.ceui-card-header {
+    font-size: $ceui-font-size-h3;
+    background-color: $ceui-card-header-bg;
+    color: $ceui-text-color;
+    padding: $ceui-card-header-padding;
+    font-weight: 600;
+    @include ceui-flex-align-center;
+  }
+
+  >.ceui-card-content {
+    padding: $ceui-card-content-padding;
+    font-size: $ceui-font-size;
+  }
+}

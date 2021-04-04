@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tab-group',
-  templateUrl: './tab-group.component.html',
-  styleUrls: ['./tab-group.component.scss']
+  selector: 'app-basic',
+  templateUrl: './basic.component.html',
+  styleUrls: ['./basic.component.scss']
 })
-export class TabGroupComponent {
+export class BasicComponent {
 
   selectedIndex = 0;
 
@@ -20,4 +20,5 @@ export class TabGroupComponent {
   onSelectedIndexChange(index: number): void {
     this.selectedIndex = index;
   }
+
 }

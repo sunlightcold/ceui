@@ -1,0 +1,15 @@
+@mixin ceui-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin ceui-flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin ceui-flex-align-center {
+  display: flex;
+  align-items: center;
+}

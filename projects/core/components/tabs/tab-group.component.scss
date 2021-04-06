@@ -1,5 +1,10 @@
 @import '../../styles/theme';
 
+$ceui-tab-label-padding: 10px 20px;             // tab label 内间距
+$ceui-tab-labels-border: 2px solid #e3e3e3;   // tabs 边距
+$ceui-label-link-bar-height: 2px;               // tab link bar height
+$ceui-tab-labels-font-weight: 500;              //  tab labels font-weight
+
 // tab 对齐方式结构样式
 @mixin tab-item-wrapper($child) {
   [ceui-align-tabs='center'] {
@@ -19,21 +24,20 @@
   position: relative;
 
   .ceui-tab-labels {
-    display: flex;
-    align-items: center;
+    @include ceui-flex-align-center;
+    color: $ceui-text-color;
+    border-bottom: $ceui-tab-labels-border;
+    font-size: $ceui-font-size-h3;
+    font-weight: $ceui-tab-labels-font-weight;
     flex-direction: row;
     cursor: pointer;
-    border-bottom: 2px solid #e3e3e3;
-    font-size: 15px;
-    font-weight: 500;
-    color: $ceui-text-color;
 
     .ceui-tab-label {
-      padding: 10px 20px;
+      padding: $ceui-tab-label-padding;
     }
 
     .ceui-tab-label-active {
-      color: black;
+      color: $ceui-primary;
     }
 
     .ceui-tab-label-disabled {
@@ -43,9 +47,9 @@
   }
 
   .ceui-label-link-bar {
-    position: absolute;
+    height: $ceui-label-link-bar-height;
     background-color: $ceui-primary;
-    height: 2px;
+    position: absolute;
   }
 }
 

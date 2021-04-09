@@ -1,8 +1,10 @@
 <div class="ceui-card">
 
   <div class="ceui-card-header">
-    {{ title }}
-    <ng-content select="[name=ceui-card-header]"></ng-content>
+    <ng-container *ngIf="ceuiCardTitle"
+                  [ngTemplateOutlet]="ceuiCardTitle.templateRef"></ng-container>
+
+    <ng-template [ngIf]="!ceuiCardTitle">{{ title }}</ng-template>
   </div>
 
   <div class="ceui-card-content">

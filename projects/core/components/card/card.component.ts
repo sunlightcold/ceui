@@ -1,15 +1,17 @@
-import { Component, Input } from '@angular/core';
+import { Component, ContentChild, Input, ViewEncapsulation } from '@angular/core';
+import { CeuiCardTitle } from './card-content.directive';
 
 @Component({
   selector: 'ceui-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
 })
-export class CardComponent {
-
+export class CeuiCardComponent {
   @Input()
   public title!: string;
 
-  constructor() {
-  }
+  @ContentChild(CeuiCardTitle)
+  ceuiCardTitle!: CeuiCardTitle;
+
+  constructor() {}
 }

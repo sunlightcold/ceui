@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from './card.component';
+import { CeuiCardComponent } from './card.component';
+import { CeuiCardContent, CeuiCardTitle } from './card-content.directive';
 
 @NgModule({
   declarations: [
-    CardComponent,
-  ],
+    CeuiCardComponent,
+    CeuiCardTitle,
+    CeuiCardContent,
+   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    CardComponent,
+    CeuiCardComponent,
+    CeuiCardTitle,
+    CeuiCardContent,
   ]
 })
 export class CeuiCardModule { }

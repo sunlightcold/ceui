@@ -13,7 +13,7 @@ $ceui-card-content-padding: 20px 10px;        // card content padding
   border-radius: $ceui-border-radius;
   box-shadow: $ceui-box-shadow;
 
-  >.ceui-card-header {
+  .ceui-card-header {
     font-size: $ceui-font-size-h3;
     background-color: $ceui-card-header-bg;
     color: $ceui-text-color;
@@ -22,8 +22,9 @@ $ceui-card-content-padding: 20px 10px;        // card content padding
     @include ceui-flex-align-center;
   }
 
-  >.ceui-card-content {
-    padding: $ceui-card-content-padding;
-    font-size: $ceui-font-size;
-  }
+}
+
+.ceui-card-content {
+  padding: $ceui-card-content-padding;
+  font-size: $ceui-font-size;
 }

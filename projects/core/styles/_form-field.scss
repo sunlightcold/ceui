@@ -1,15 +1,32 @@
-@import './theme';
-
 $ceui-input-border-radius: 3px; // input 圆角
 $ceui-input-border: 1px solid #ced4da; // input 边框
 $ceui-input-padding: 0 10px; // input 内边距
 
 small {
-  font-size: 12px;
+  font-size: $ceui-font-size-xs;
 }
 
-input {
+input.ceui-input,
+textarea.ceui-input {
   outline: none;
+  font-size: $ceui-font-size-sm;
+}
+
+textarea.ceui-input {
+  padding: 5px 10px;
+}
+
+textarea.ceui-input[resize="none"] {
+  resize: none;
+}
+textarea.ceui-input[resize="both"] {
+  resize: both;
+}
+textarea.ceui-input[resize="horizontal"] {
+  resize: horizontal;
+}
+textarea.ceui-input[resize="vertical"] {
+  resize: vertical;
 }
 
 .ceui-input {
@@ -22,11 +39,11 @@ input {
   height: 100%;
 }
 
-.ceui-input:hover {
+.ceui-input:hover:not(:disabled):not(:read-only) {
   border-color: $ceui-primary;
 }
 
-.ceui-input:focus {
+.ceui-input:focus:not(:disabled):not(:read-only) {
   border-color: rgba(#000, 0);
   box-shadow: 0 0 0 2px $ceui-primary;
 }
@@ -38,6 +55,20 @@ input {
     border: 1px solid rgba(#000, 0);
     box-shadow: 0 0 0 1px $ceui-error !important;
   }
+}
+
+.ceui-input.ng-invalid:not(.ng-untouched),
+.ceui-input.ng-invalid:focus:not(.ng-untouched),
+.ceui-input.ng-invalid:hover:not(.ng-untouched) {
+  border: 1px solid rgba(#000, 0);
+  box-shadow: 0 0 0 2px $ceui-error;
+}
+
+.ceui-input:disabled,
+.ceui-input:read-only {
+  color: $ceui-disabled-color;
+  cursor: not-allowed;
+  background: $ceui-disabled-bg;
 }
 
 .ceui-input-lg,

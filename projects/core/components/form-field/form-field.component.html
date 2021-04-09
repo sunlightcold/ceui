@@ -6,6 +6,6 @@
   <ng-content></ng-content>
   <div class="ceui-form-field-subscript-wrapper">
     <ng-content select="ceui-hint"></ng-content>
-    <ng-content *ngIf="invalid" select="ceui-error"></ng-content>
+    <ng-content *ngIf="invalid && touched" select="ceui-error"></ng-content>
   </div>
 </div>

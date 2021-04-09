@@ -1,6 +1,12 @@
-import { AfterViewInit, Component, ContentChild, Input, OnInit } from '@angular/core';
-import { AbstractControlDirective, NgControl } from '@angular/forms';
-import { fallbackValue } from '@ceui/cdk/utils';
+import {
+  AfterViewInit,
+  Component,
+  ContentChild,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { NgControl } from '@angular/forms';
+import { getSafeObjProp } from '@ceui/cdk/utils';
 
 @Component({
   selector: 'ceui-form-field',
@@ -12,10 +18,30 @@ export class CeuiFormFieldComponent implements OnInit, AfterViewInit {
   width!: string;
 
   @ContentChild(NgControl)
-  control!: NgControl;
+  private readonly _ngControl!: NgControl;
 
-  get invalid() {
-    return this.control ? fallbackValue<boolean>(this.control.invalid, false) : false;
+  get invalid(): boolean {
+    return getSafeObjProp<boolean>(
+      this._ngControl,
+      ({ invalid }) => invalid,
+      false
+    );
+  }
+
+  get valid(): boolean {
+    return getSafeObjProp<boolean>(
+      this._ngControl,
+      ({ valid }) => valid,
+      false
+    );
+  }
+
+  get touched(): boolean {
+    return getSafeObjProp<boolean>(
+      this._ngControl,
+      ({ touched }) => touched,
+      false
+    );
   }
 
   constructor() {}
@@ -23,6 +49,6 @@ export class CeuiFormFieldComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    console.log(this.control);
+    console.log(this._ngControl);
   }
 }

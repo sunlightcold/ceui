@@ -1,5 +1,6 @@
 @import './core';
 @import './font';
 @import './color';
-@import './mixins/layout';
-@import './mixins/input';
+@import './mixins/mixins';
+@import './mixins/form-field';
+@import './form-field';

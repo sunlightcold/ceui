@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlertComponent } from './alert.component';
+import { CeuiAlertComponent } from './alert.component';
 
 @NgModule({
-  imports: [
-    CommonModule
+  declarations: [
+    CeuiAlertComponent,
   ],
-  declarations: [AlertComponent],
-  exports: [AlertComponent]
+  imports: [
+    CommonModule,
+  ],
+  exports: [
+    CeuiAlertComponent,
+  ]
 })
 export class CeuiAlertModule { }

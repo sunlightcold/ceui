@@ -6,7 +6,7 @@ import { ThemePalette } from '@ceui/core/types';
   templateUrl: './alert.component.html',
   styleUrls: ['./alert.component.scss']
 })
-export class AlertComponent {
+export class CeuiAlertComponent {
   /**
    * 可关闭的，显示关闭按钮，默认 false
    */

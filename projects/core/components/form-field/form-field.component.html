@@ -1,0 +1,11 @@
+<div class="ceui-form-field-wrapper"
+     [style.width]="width">
+  <div class="ceui-form-field-label-wrapper">
+    <ng-content select="ceui-label"></ng-content>
+  </div>
+  <ng-content></ng-content>
+  <div class="ceui-form-field-subscript-wrapper">
+    <ng-content select="ceui-hint"></ng-content>
+    <ng-content *ngIf="invalid" select="ceui-error"></ng-content>
+  </div>
+</div>

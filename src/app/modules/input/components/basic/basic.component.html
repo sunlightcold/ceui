@@ -1,0 +1,14 @@
+<p>
+  <ceui-input #input [(ngModel)]="value" [required]="true" placeholder="大尺寸" [readonly]="true" size="lg" (ngModelChange)="onNgModelChange($event)"></ceui-input>
+</p>
+<p>
+  <ceui-input [(ngModel)]="value" placeholder="中等尺寸" [readonly]="true" size="md" (ngModelChange)="onNgModelChange($event)"></ceui-input>
+</p>
+<p>
+  <ceui-input [(ngModel)]="value" placeholder="小尺寸" [readonly]="true" size="sm" (ngModelChange)="onNgModelChange($event)"></ceui-input>
+</p>
+<p>
+  <ceui-input [(ngModel)]="value" placeholder="超小尺寸" [readonly]="true" size="xs" (ngModelChange)="onNgModelChange($event)"></ceui-input>
+</p>
+<input type="text" #input>
+<button (click)="onButtonEvent(input.value)">设置value</button>

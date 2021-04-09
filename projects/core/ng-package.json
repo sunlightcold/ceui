@@ -3,5 +3,6 @@
   "dest": "../../dist/core",
   "lib": {
     "entryFile": "index.ts"
-  }
+  },
+  "assets": ["styles"]
 }

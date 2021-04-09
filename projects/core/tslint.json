@@ -5,7 +5,8 @@
       true,
       "attribute",
       "ceui",
-      "camelCase"
+      "camelCase",
+      "kebab-case"
     ],
     "component-selector": [
       true,

@@ -1,0 +1,35 @@
+<ceui-form-field width="500px">
+  <ceui-label>姓名</ceui-label>
+  <input ceui-input ceui-input-sm type="text">
+  <ceui-error>错误 error</ceui-error>
+</ceui-form-field>
+
+<ceui-form-field width="500px">
+  <ceui-label>年龄</ceui-label>
+  <input ceui-input ceui-input-sm type="text">
+  <ceui-error>错误 error</ceui-error>
+</ceui-form-field>
+
+<ceui-form-field width="500px">
+  <ceui-label>性别</ceui-label>
+  <input ceui-input ceui-input-sm type="text">
+  <ceui-error>错误 error</ceui-error>
+</ceui-form-field>
+
+<ceui-form-field width="500px">
+  <ceui-label>formControl 测试 invalid</ceui-label>
+  <input ceui-input ceui-input-sm type="text" [formControl]="control">
+  <ceui-error>必填项</ceui-error>
+</ceui-form-field>
+
+<ceui-form-field width="500px">
+  <ceui-label>ngMode 测试 invalid</ceui-label>
+  <input ceui-input ceui-input-sm type="text" [required]="true" [(ngModel)]="value">
+  <ceui-error>必填项</ceui-error>
+</ceui-form-field>
+
+<ceui-form-field width="500px">
+  <ceui-label>身高</ceui-label>
+  <input ceui-input ceui-input-sm type="text" maxLength="10" [(ngModel)]="value">
+  <ceui-hint>maxlength：{{ value.length }} / 10</ceui-hint>
+</ceui-form-field>

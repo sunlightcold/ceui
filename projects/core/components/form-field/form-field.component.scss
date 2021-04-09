@@ -1,0 +1,26 @@
+.ceui-form-field-wrapper {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 5px;
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  letter-spacing: normal;
+}
+
+.ceui-form-field-label-wrapper {
+  font-size: 13px;
+  padding: 0 2px;
+  height: 22px;
+  line-height: 22px;
+  box-sizing: border-box;
+}
+
+.ceui-form-field-subscript-wrapper {
+  font-size: 12px;
+  padding: 0 2px;
+  height: 20px;
+  line-height: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}

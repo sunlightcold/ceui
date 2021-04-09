@@ -15,8 +15,16 @@ const routes: Routes = [
     loadChildren: () => import('./modules/card/card.module').then(module => module.CardModule),
   },
   {
+    path: 'input',
+    loadChildren: () => import('./modules/input/input.module').then(module => module.InputModule),
+  },
+  {
+    path: 'form-field',
+    loadChildren: () => import('./modules/form-field/form-field.module').then(module => module.FormFieldModule),
+  },
+  {
     path: '',
-    redirectTo: 'card',
+    redirectTo: 'form-field',
     pathMatch: 'full'
   }
 ];

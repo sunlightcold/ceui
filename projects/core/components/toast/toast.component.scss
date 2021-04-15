@@ -1,0 +1,14 @@
+@import '../../styles/theme';
+
+.ceui-toast {
+  box-shadow: $ceui-box-shadow;
+  border-radius: $ceui-border-radius;
+  padding: 10px;
+  display: inline-block;
+  min-width: 300px;
+}
+
+
+.ceui-toast-primary {
+  background-color: $ceui-primary-bg;
+}

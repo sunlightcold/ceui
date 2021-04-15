@@ -23,8 +23,12 @@ const routes: Routes = [
     loadChildren: () => import('./modules/form-field/form-field.module').then(module => module.FormFieldModule),
   },
   {
+    path: 'toast',
+    loadChildren: () => import('./modules/toast/toast.module').then(module => module.ToastModule),
+  },
+  {
     path: '',
-    redirectTo: 'form-field',
+    redirectTo: 'toast',
     pathMatch: 'full'
   }
 ];

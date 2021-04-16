@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CeuiToastService } from '@ceui/core/components';
+import { ThemePalette } from '@ceui/core/types';
 
 @Component({
   selector: 'app-basic',
@@ -13,8 +14,8 @@ export class BasicComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  open() {
-    this.toastService.open('测试', { theme: 'primary' });
+  open(theme: ThemePalette) {
+    this.toastService.open('测试', { theme });
   }
 
 }

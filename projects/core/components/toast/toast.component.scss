@@ -1,14 +1,40 @@
-@import '../../styles/theme';
+@import "../../styles/theme";
 
 .ceui-toast {
   box-shadow: $ceui-box-shadow;
   border-radius: $ceui-border-radius;
-  padding: 10px;
+  font-size: $ceui-font-size;
   display: inline-block;
+  padding: 15px;
+  margin: 10px;
   min-width: 300px;
 }
 
+.ceui-toast-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ceui-toast-message {
+  flex: 1 1 auto;
+}
+
+.ceui-toast-close {
+  cursor: pointer;
+}
 
 .ceui-toast-primary {
   background-color: $ceui-primary-bg;
+}
+
+.ceui-toast-success {
+  background-color: $ceui-success-bg;
+}
+
+.ceui-toast-warning {
+  background-color: $ceui-warning-bg;
+}
+
+.ceui-toast-error {
+  background-color: $ceui-error-bg;
 }

@@ -1,5 +1,10 @@
 <div class="ceui-toast ceui-toast-{{ theme }}">
-  <p>
-    {{ data }}
-  </p>
+  <div class="ceui-toast-wrapper">
+    <div class="ceui-toast-message">
+      {{ data }}
+    </div>
+    <div class="ceui-toast-close" (click)="onCloseEvent()">
+      <i class="ceui-font ceui-icon-close"></i>
+    </div>
+  </div>
 </div>

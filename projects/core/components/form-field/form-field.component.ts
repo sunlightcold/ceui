@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ContentChild,
   Input,
@@ -12,6 +13,7 @@ import { getSafeObjProp } from '@ceui/cdk/utils';
   selector: 'ceui-form-field',
   templateUrl: './form-field.component.html',
   styleUrls: ['./form-field.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CeuiFormFieldComponent implements OnInit, AfterViewInit {
   @Input()

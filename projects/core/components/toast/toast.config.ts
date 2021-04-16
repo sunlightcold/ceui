@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { ThemePalette } from '@ceui/core/types';
+import { Direction, ThemePalette } from '@ceui/core/types';
 
 /**
  * toast 配置
@@ -12,12 +12,11 @@ export class CeuiToastConfig {
    */
   duration?: number;
 
-  /**
-   * 固定
-   */
   sticky?: boolean;
 
   closable?: boolean;
+
+  direction?: Direction;
 }
 
 export const CEUI_TOAST_CONFIG_DEFAULT: CeuiToastConfig = {
@@ -28,16 +27,16 @@ export const CEUI_TOAST_CONFIG_DEFAULT: CeuiToastConfig = {
   sticky: false,
 
   closable: true,
+
+  direction: 'topRight',
 };
 
 /**
  * toast 数据令牌
  */
-export const CEUI_TOAST_DATA = new InjectionToken<string>('ceui-toast-data');
+export const CEUI_TOAST_DATA = new InjectionToken<string>('CEUI_TOAST_DATA');
 
 /**
  * toast config 令牌
  */
-export const CEUI_TOAST_CONFIG = new InjectionToken<CeuiToastConfig>(
-  'ceui-toast-config'
-);
+export const CEUI_TOAST_CONFIG = new InjectionToken<CeuiToastConfig>('CEUI_TOAST_CONFIG');

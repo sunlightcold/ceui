@@ -1,4 +1,4 @@
-<div class="ceui-toast ceui-toast-{{ theme }}">
+<div class="ceui-toast ceui-toast-{{ theme }}" *ngIf="!leaved" [@EnterLeave]="'flyIn'">
   <div class="ceui-toast-wrapper">
     <div class="ceui-toast-message">
       {{ data }}

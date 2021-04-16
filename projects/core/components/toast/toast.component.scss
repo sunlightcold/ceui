@@ -1,9 +1,12 @@
 @import "../../styles/theme";
 
+$ceui-toast-color: #fff;
+
 .ceui-toast {
   box-shadow: $ceui-box-shadow;
   border-radius: $ceui-border-radius;
   font-size: $ceui-font-size;
+  color: $ceui-toast-color;
   display: inline-block;
   padding: 15px;
   margin: 10px;
@@ -24,17 +27,17 @@
 }
 
 .ceui-toast-primary {
-  background-color: $ceui-primary-bg;
+  background-color: $ceui-primary;
 }
 
 .ceui-toast-success {
-  background-color: $ceui-success-bg;
+  background-color: $ceui-success;
 }
 
 .ceui-toast-warning {
-  background-color: $ceui-warning-bg;
+  background-color: $ceui-warning;
 }
 
 .ceui-toast-error {
-  background-color: $ceui-error-bg;
+  background-color: $ceui-error;
 }

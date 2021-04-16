@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CeuiToastService } from '@ceui/core/components';
-import { ThemePalette } from '@ceui/core/types';
+import { ThemePalette, Direction } from '@ceui/core/types';
 
 @Component({
   selector: 'app-basic',
@@ -15,7 +15,14 @@ export class BasicComponent implements OnInit {
   }
 
   open(theme: ThemePalette) {
-    this.toastService.open('测试', { theme });
+    this.toastService.open(theme, { theme });
   }
 
+  openSticky() {
+    this.toastService.open('sticky', { sticky: true });
+  }
+
+  openDirection(direction: Direction) {
+    this.toastService.open(direction, { direction });
+  }
 }

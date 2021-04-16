@@ -1,18 +1,32 @@
-import { OverlayRef } from '@angular/cdk/overlay';
-import { Component, Inject, OnInit, Optional, Self } from '@angular/core';
-import {
-  CeuiToastConfig,
-  CEUI_TOAST_CONFIG,
-  CEUI_TOAST_DATA,
-} from './toast.config';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ChangeDetectionStrategy, Component, Inject, OnInit, Optional, ChangeDetectorRef } from '@angular/core';
+import { CeuiToastConfig, CEUI_TOAST_CONFIG, CEUI_TOAST_DATA } from './toast.config';
 import { ToastRef } from './toast.ref';
 
 @Component({
   selector: 'ceui-toast',
   templateUrl: './toast.component.html',
   styleUrls: ['./toast.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    trigger('EnterLeave', [
+      state('flyIn', style({ transform: 'translateY(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateY(100%)' }),
+        animate('200ms ease-in'),
+      ]),
+      transition(':leave', [
+        animate('200ms ease-out', style({ transform: 'translateY(-100%)' })),
+      ]),
+    ]),
+  ],
 })
 export class CeuiToastComponent implements OnInit {
+  /**
+   * 离开状态，用于触发动画
+   */
+  leaved = false;
+
   get theme() {
     return this.config.theme;
   }
@@ -27,25 +41,34 @@ export class CeuiToastComponent implements OnInit {
     @Optional()
     @Inject(CEUI_TOAST_CONFIG)
     public config: Required<CeuiToastConfig>,
-    private _toastRef: ToastRef
-  ) {
-    console.log(this.data, this.config, this._toastRef);
-  }
+    private readonly _toastRef: ToastRef,
+    private readonly _changeDetectorRef: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     const { duration, sticky } = this.config;
     if (!sticky) {
-      this.intervalClose(duration);
+      this._intervalClose(duration);
     }
   }
 
-  intervalClose(duration: number) {
+  private _intervalClose(duration: number) {
+    setTimeout(() => this._close(), duration);
+  }
+
+  private _triggerLeavingAnimation() {
+    this.leaved = true;
+    this._changeDetectorRef.markForCheck();
+  }
+
+  private _close() {
+    this._triggerLeavingAnimation();
     setTimeout(() => {
       this._toastRef.close();
-    }, duration);
+    }, 300);
   }
 
   onCloseEvent() {
-    this._toastRef.close();
+    this._close();
   }
 }

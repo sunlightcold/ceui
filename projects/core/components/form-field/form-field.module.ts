@@ -5,6 +5,7 @@ import { CeuiErrorDirective } from './error.directive';
 import { CeuiLabelDirective } from './label.directive';
 import { CeuiHintDirective } from './hint.directive';
 import { CeuiResizeDirective } from './resize.directive';
+import { CeuiSuffixDirective } from './suffix.directive';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CeuiResizeDirective } from './resize.directive';
     CeuiLabelDirective,
     CeuiHintDirective,
     CeuiResizeDirective,
+    CeuiSuffixDirective,
    ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { CeuiResizeDirective } from './resize.directive';
     CeuiLabelDirective,
     CeuiHintDirective,
     CeuiResizeDirective,
+    CeuiSuffixDirective,
   ]
 })
 export class CeuiFormFieldModule { }

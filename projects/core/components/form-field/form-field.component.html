@@ -3,7 +3,12 @@
   <div class="ceui-form-field-label-wrapper">
     <ng-content select="ceui-label"></ng-content>
   </div>
-  <ng-content></ng-content>
+  <div class="ceui-form-field-content-wrapper">
+    <ng-content></ng-content>
+    <div class="ceui-form-field-content-suffix" #suffix>
+      <ng-content select="[ceuiSuffix], [ceui-suffix]"></ng-content>
+    </div>
+  </div>
   <div class="ceui-form-field-subscript-wrapper">
     <ng-content select="ceui-hint"></ng-content>
     <ng-content *ngIf="invalid && touched" select="ceui-error"></ng-content>

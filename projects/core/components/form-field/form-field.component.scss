@@ -1,4 +1,4 @@
-@import "../../styles/theme";
+@import '../../styles/theme';
 
 .ceui-form-field-wrapper {
   display: inline-block;
@@ -6,8 +6,6 @@
   padding: 0 5px;
   height: 100%;
   width: 100%;
-  font-family: Roboto, Helvetica Neue, sans-serif;
-  letter-spacing: normal;
 }
 
 .ceui-form-field-label-wrapper {
@@ -16,6 +14,19 @@
   height: 22px;
   line-height: 22px;
   box-sizing: border-box;
+}
+
+.ceui-form-field-content-wrapper {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+.ceui-form-field-content-suffix {
+  position: absolute;
+  right: 5px;
+  height: 100%;
+  @include ceui-flex-align-center;
 }
 
 .ceui-form-field-subscript-wrapper {

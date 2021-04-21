@@ -23,34 +23,20 @@ export class CeuiFormFieldComponent implements OnInit, AfterViewInit {
   private readonly _ngControl!: NgControl;
 
   get invalid(): boolean {
-    return getSafeObjProp<boolean>(
-      this._ngControl,
-      ({ invalid }) => invalid,
-      false
-    );
+    return getSafeObjProp<boolean>(this._ngControl, ({ invalid }) => invalid, false);
   }
 
   get valid(): boolean {
-    return getSafeObjProp<boolean>(
-      this._ngControl,
-      ({ valid }) => valid,
-      false
-    );
+    return getSafeObjProp<boolean>(this._ngControl, ({ valid }) => valid, false);
   }
 
   get touched(): boolean {
-    return getSafeObjProp<boolean>(
-      this._ngControl,
-      ({ touched }) => touched,
-      false
-    );
+    return getSafeObjProp<boolean>(this._ngControl, ({ touched }) => touched, false);
   }
 
   constructor() {}
 
   ngOnInit() {}
 
-  ngAfterViewInit() {
-    console.log(this._ngControl);
-  }
+  ngAfterViewInit() {}
 }

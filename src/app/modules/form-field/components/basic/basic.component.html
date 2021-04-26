@@ -1,42 +1,57 @@
-<ceui-form-field width="500px">
+<ceui-form-field>
   <ceui-label>label</ceui-label>
   <input ceui-input ceui-input-sm type="text" placeholder="测试 label">
 </ceui-form-field>
 
-<ceui-form-field width="500px">
+<ceui-form-field>
   <ceui-label>提示</ceui-label>
   <input ceui-input ceui-input-sm type="text" placeholder="测试 hint" [(ngModel)]="value">
   <ceui-hint>输入字符数：{{ value.length }}</ceui-hint>
 </ceui-form-field>
 
-<ceui-form-field width="500px">
+<ceui-form-field>
   <ceui-label>只读</ceui-label>
   <input ceui-input ceui-input-sm type="text" readonly placeholder="readonly">
 </ceui-form-field>
 
-<ceui-form-field width="500px">
+<ceui-form-field>
   <ceui-label>formControl 测试 invalid</ceui-label>
   <input ceui-input ceui-input-sm type="text" [formControl]="control" placeholder="必填">
   <ceui-error>错误提示</ceui-error>
 </ceui-form-field>
 
-<ceui-form-field width="500px">
+<ceui-form-field>
   <ceui-label>ngMode 测试 invalid</ceui-label>
   <input ceui-input ceui-input-sm type="text" [required]="true" [(ngModel)]="value" placeholder="必填">
   <button ceui-suffix>点击</button>
   <ceui-error>必填项</ceui-error>
 </ceui-form-field>
 
-<ceui-form-field width="500px">
+<ceui-form-field>
   <ceui-label>禁用</ceui-label>
   <input ceui-input ceui-input-sm type="text" maxLength="10" disabled [(ngModel)]="value">
+  <button ceui-prefix>点击</button>
   <button ceui-suffix>点击</button>
 </ceui-form-field>
 
-<ceui-form-field width="500px">
+<ceui-form-field [style.width]="'100%'">
   <ceui-label>文本域</ceui-label>
   <textarea ceui-input ceui-input-md type="text" maxlength="100" [(ngModel)]="value" resize="both"></textarea>
   <button ceui-suffix>点击</button>
   <ceui-hint>maxlength：{{ value.length }} / 100</ceui-hint>
+</ceui-form-field>
+
+<ceui-form-field>
+  <ceui-label>级联</ceui-label>
+  <ceui-cascader ceui-input-sm [options]="options" [(ngModel)]="value" [required]="true" [disabled]="true"></ceui-cascader>
+  <button ceui-suffix>点击</button>
+  <ceui-error>必填项</ceui-error>
+</ceui-form-field>
+
+<ceui-form-field>
+  <ceui-label>级联</ceui-label>
+  <ceui-cascader ceui-input-sm [options]="options" [(ngModel)]="value" [required]="true"></ceui-cascader>
+  <button ceui-suffix>点击</button>
+  <ceui-error>必填项</ceui-error>
 </ceui-form-field>
 

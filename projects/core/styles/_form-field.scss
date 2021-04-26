@@ -16,16 +16,16 @@ textarea.ceui-input {
   padding: 5px 10px;
 }
 
-textarea.ceui-input[resize="none"] {
+textarea.ceui-input[resize='none'] {
   resize: none;
 }
-textarea.ceui-input[resize="both"] {
+textarea.ceui-input[resize='both'] {
   resize: both;
 }
-textarea.ceui-input[resize="horizontal"] {
+textarea.ceui-input[resize='horizontal'] {
   resize: horizontal;
 }
-textarea.ceui-input[resize="vertical"] {
+textarea.ceui-input[resize='vertical'] {
   resize: vertical;
 }
 
@@ -37,9 +37,10 @@ textarea.ceui-input[resize="vertical"] {
   box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
   width: 100%;
   height: 100%;
+  margin: 2px;
 }
 
-.ceui-input:hover:not(:disabled):not(:read-only) {
+.ceui-input:hover:not(:disabled):not(:read-only):not(._invalid) {
   border-color: $ceui-primary;
 }
 
@@ -71,23 +72,39 @@ textarea.ceui-input[resize="vertical"] {
   background: $ceui-disabled-bg;
 }
 
+.ceui-form-field {
+  display: inline-block;
+}
+
+._prefix .ceui-form-field-content-infix .ceui-input {
+  padding-left: 50px;
+}
+
+._suffix .ceui-form-field-content-infix .ceui-input {
+  padding-right: 50px;
+}
+
 .ceui-input-lg,
-[ceui-input-lg] {
+[ceui-input-lg],
+[ceui-input-lg] input {
   @include ceui-input-lg();
 }
 
 .ceui-input-md,
-[ceui-input-md] {
+[ceui-input-md],
+[ceui-input-md] input {
   @include ceui-input-md();
 }
 
 .ceui-input-sm,
-[ceui-input-sm] {
+[ceui-input-sm],
+[ceui-input-sm] input {
   @include ceui-input-sm();
 }
 
 .ceui-input-xs,
-[ceui-input-xs] {
+[ceui-input-xs],
+[ceui-input-xs] input {
   @include ceui-input-xs();
 }
 

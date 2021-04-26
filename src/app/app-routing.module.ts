@@ -27,8 +27,12 @@ const routes: Routes = [
     loadChildren: () => import('./modules/toast/toast.module').then(module => module.ToastModule),
   },
   {
+    path: 'cascader',
+    loadChildren: () => import('./modules/cascader/cascader.module').then(module => module.CascaderModule),
+  },
+  {
     path: '',
-    redirectTo: 'toast',
+    redirectTo: 'cascader',
     pathMatch: 'full'
   }
 ];

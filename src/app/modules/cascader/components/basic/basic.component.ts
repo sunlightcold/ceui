@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-basic',
@@ -7,10 +6,6 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./basic.component.scss'],
 })
 export class BasicComponent implements OnInit {
-  value = '';
-
-  control = new FormControl('', Validators.required);
-
   options = [
     {
       key: '1',
@@ -80,7 +75,13 @@ export class BasicComponent implements OnInit {
     },
   ];
 
+  selected: string[] = [];
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onNgModelChange(event: string[]) {
+    console.log(event);
+  }
 }

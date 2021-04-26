@@ -1,11 +1,15 @@
-<div class="ceui-form-field-wrapper"
-     [style.width]="width">
+<div class="ceui-form-field-wrapper">
   <div class="ceui-form-field-label-wrapper">
     <ng-content select="ceui-label"></ng-content>
   </div>
   <div class="ceui-form-field-content-wrapper">
-    <ng-content></ng-content>
-    <div class="ceui-form-field-content-suffix" #suffix>
+    <div class="ceui-from-field-content-prefix" *ngIf="prefixChildren.length">
+      <ng-content select="[ceuiPrefix], [ceui-prefix]"></ng-content>
+    </div>
+    <div class="ceui-form-field-content-infix">
+      <ng-content></ng-content>
+    </div>
+    <div class="ceui-form-field-content-suffix" *ngIf="suffixChildren.length">
       <ng-content select="[ceuiSuffix], [ceui-suffix]"></ng-content>
     </div>
   </div>

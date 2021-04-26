@@ -1,3 +1,13 @@
-<p>
-  cascader works!
-</p>
+<ceui-cascader-trigger #cascader
+                       [options]="options"
+                       [value]="value"
+                       [panelWidth]="panelWidth"
+                       (valueChanges)="onValueChanges($event)">
+  <input ceui-input
+         type="text"
+         [placeholder]="placeholder"
+         [ngModel]="cascader.viewValue"
+         [disabled]="disabled"
+         [class._invalid]="computedInvalid" />
+
+</ceui-cascader-trigger>

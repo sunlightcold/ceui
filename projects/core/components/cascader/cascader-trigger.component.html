@@ -1,0 +1,27 @@
+<ng-content></ng-content>
+<ul class="start-ul"
+    *ngIf="isOpened"
+    [style.width]="panelWidth">
+  <ng-container [ngTemplateOutlet]="childTemplate"
+                [ngTemplateOutletContext]="{ list: options, level: 0 }"></ng-container>
+</ul>
+
+<ng-template #childTemplate
+             let-list="list"
+             let-level="level">
+  <li class="li"
+      *ngFor="let item of list"
+      [class.activate]="viewKeys[value.length - 1] === item.key"
+      [class.selected]="viewKeys.includes(item.key)"
+      (click)="onChildNodeClick($event, item, level)">
+    {{ item.value }}
+    <i *ngIf="item.children" class="ceui-font ceui-icon-arrow-right"></i>
+    <ul class="content-ul"
+        [style.width]="panelWidth"
+        [style.left]="panelWidth"
+        *ngIf="item.children && item.children.length && viewKeys.includes(item.key)">
+      <ng-container [ngTemplateOutlet]="childTemplate"
+                    [ngTemplateOutletContext]="{ list: item.children, level: level + 1 }"></ng-container>
+    </ul>
+  </li>
+</ng-template>

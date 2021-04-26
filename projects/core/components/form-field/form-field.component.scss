@@ -19,18 +19,28 @@
 .ceui-form-field-content-wrapper {
   display: flex;
   position: relative;
+}
+
+.ceui-from-field-content-prefix {
+  position: absolute;
+  left: 5px;
   height: 100%;
+  @include ceui-flex-align-center;
+}
+
+.ceui-form-field-content-infix {
+  flex: 1;
 }
 
 .ceui-form-field-content-suffix {
   position: absolute;
-  right: 5px;
+  right: 1px;
   height: 100%;
   @include ceui-flex-align-center;
 }
 
 .ceui-form-field-subscript-wrapper {
-  font-size: 12px;
+  font-size: $ceui-font-size-xs;
   padding: 0 2px;
   height: 20px;
   line-height: 20px;

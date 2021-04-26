@@ -22,6 +22,10 @@ export function isString(value: any): value is string {
 /**
  * 判断值不为空数组，length > 0
  */
-export function isLenArray<T>(value: T): value is T {
+export function isLenArray<T = any>(value: any): value is T[] {
   return Array.isArray(value) && value.length > 0;
+}
+
+export function isEmpArray<T>(value: any): value is T[] {
+  return Array.isArray(value) && value.length === 0;
 }

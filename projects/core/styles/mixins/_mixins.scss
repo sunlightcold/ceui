@@ -13,3 +13,9 @@
   display: flex;
   align-items: center;
 }
+
+@mixin ceui-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

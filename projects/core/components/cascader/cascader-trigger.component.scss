@@ -1,0 +1,48 @@
+@import '../../styles/theme';
+
+.start-ul {
+  position: absolute;
+  z-index: 9999;
+}
+
+ul {
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: $ceui-box-shadow;
+  position: relative;
+  border-radius: $ceui-border-radius;
+  font-size: 13px;
+  min-height: 28px;
+  background-color: #fff;
+}
+
+.content-ul {
+  position: absolute;
+  top: 0;
+}
+
+.li {
+  cursor: pointer;
+  padding: 8px 10px;
+  color: #333;
+  justify-content: space-between;
+  height: 28px;
+  box-sizing: border-box;
+  @include ceui-text-ellipsis;
+  @include ceui-flex-align-center;
+}
+
+.li:hover {
+  background-color: #eee;
+}
+
+.li.selected {
+  background-color: #eee;
+  color: $ceui-primary;
+}
+
+.li.activate {
+  background-color: $ceui-primary;
+  color: #fff;
+}

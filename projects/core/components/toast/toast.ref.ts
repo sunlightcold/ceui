@@ -1,10 +1,14 @@
 import { OverlayRef } from '@angular/cdk/overlay';
 
 export class ToastRef {
-  private _overlayRef: OverlayRef;
+  public _overlayRef: OverlayRef;
 
   constructor(overlayRef: OverlayRef) {
     this._overlayRef = overlayRef;
+  }
+
+  isVisible() {
+    return this._overlayRef && this._overlayRef.overlayElement;
   }
 
   close() {

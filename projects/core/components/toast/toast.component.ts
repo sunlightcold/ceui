@@ -1,5 +1,12 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, Inject, OnInit, Optional, ChangeDetectorRef } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  Inject,
+  OnInit,
+  Optional,
+} from '@angular/core';
 import { CeuiToastConfig, CEUI_TOAST_CONFIG, CEUI_TOAST_DATA } from './toast.config';
 import { ToastRef } from './toast.ref';
 
@@ -9,14 +16,17 @@ import { ToastRef } from './toast.ref';
   styleUrls: ['./toast.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
-    trigger('EnterLeave', [
-      state('flyIn', style({ transform: 'translateY(0)' })),
-      transition(':enter', [
-        style({ transform: 'translateY(100%)' }),
-        animate('200ms ease-in'),
+    trigger('messageState', [
+      state('visible', style({ transform: 'translateY(0)', opacity: 1 })),
+      transition('void => *', [
+        style({ transform: 'translateY(100%)', opacity: 0 }),
+        animate('300ms ease-out'),
       ]),
-      transition(':leave', [
-        animate('200ms ease-out', style({ transform: 'translateY(-100%)' })),
+      transition('* => void', [
+        animate(
+          '250ms ease-in',
+          style({ height: 0, opacity: 0, transform: 'translateY(-100%)' }),
+        ),
       ]),
     ]),
   ],
@@ -34,6 +44,7 @@ export class CeuiToastComponent implements OnInit {
   get closable() {
     return this.config.closable;
   }
+
   constructor(
     @Optional()
     @Inject(CEUI_TOAST_DATA)
@@ -42,7 +53,7 @@ export class CeuiToastComponent implements OnInit {
     @Inject(CEUI_TOAST_CONFIG)
     public config: Required<CeuiToastConfig>,
     private readonly _toastRef: ToastRef,
-    private readonly _changeDetectorRef: ChangeDetectorRef
+    private readonly _changeDetectorRef: ChangeDetectorRef,
   ) {}
 
   ngOnInit() {

@@ -1,9 +1,4 @@
-import {
-  GlobalPositionStrategy,
-  Overlay,
-  OverlayConfig,
-  PositionStrategy,
-} from '@angular/cdk/overlay';
+import { Overlay, PositionStrategy } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable, Injector, StaticProvider } from '@angular/core';
 import { CeuiToastComponent } from './toast.component';
@@ -30,13 +25,17 @@ export class CeuiToastService {
 
     const toastRef = new ToastRef(overlayRef);
 
-    const portalInject = Injector.create({
-      providers: this._createInjector(message, toastRef, config),
-      parent: this._injector,
-    });
+    const portalInject = this._getPortalInject(message, toastRef, config);
 
     const componentPortal = new ComponentPortal(CeuiToastComponent, null, portalInject);
     overlayRef.attach(componentPortal);
+  }
+
+  private _getPortalInject(message: string, toastRef: ToastRef, config: CeuiToastConfig) {
+    return Injector.create({
+      providers: this._createInjector(message, toastRef, config),
+      parent: this._injector,
+    });
   }
 
   private _createInjector(
@@ -66,22 +65,35 @@ export class CeuiToastService {
   }
 
   private _getPositionStrategy({ direction }: CeuiToastConfig): PositionStrategy {
-    const lowerCase = direction?.toLocaleLowerCase();
     const strategy = this._overlay.position().global();
-    if (lowerCase?.includes('top')) {
-      strategy.top().centerVertically();
-    }
-    if (lowerCase?.includes('left')) {
-      strategy.left().centerVertically();
-    }
-    if (lowerCase?.includes('bottom')) {
-      strategy.bottom().centerVertically();
-    }
-    if (lowerCase?.includes('right')) {
-      strategy.right().centerVertically();
-    }
-    if (lowerCase?.includes('center')) {
-      strategy.centerHorizontally().centerVertically();
+    switch (direction) {
+      case 'top':
+        strategy.top().centerHorizontally();
+        break;
+      case 'right':
+        strategy.right().centerVertically();
+        break;
+      case 'bottom':
+        strategy.bottom().centerHorizontally();
+        break;
+      case 'left':
+        strategy.left().centerVertically();
+        break;
+      case 'topLeft':
+        strategy.top().left();
+        break;
+      case 'topRight':
+        strategy.top().right();
+        break;
+      case 'bottomLeft':
+        strategy.bottom().left();
+        break;
+      case 'bottomRight':
+        strategy.bottom().right();
+        break;
+      case 'center':
+        strategy.centerVertically().centerHorizontally();
+        break;
     }
     return strategy;
   }

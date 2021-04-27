@@ -1,9 +1,12 @@
-<div class="ceui-toast ceui-toast-{{ theme }}" *ngIf="!leaved" [@EnterLeave]="'flyIn'">
+<div *ngIf="!leaved"
+     class="ceui-toast ceui-toast-{{ theme }}"
+     [@messageState]="{value: 'visible'}">
   <div class="ceui-toast-wrapper">
     <div class="ceui-toast-message">
       {{ data }}
     </div>
-    <div class="ceui-toast-close" (click)="onCloseEvent()">
+    <div class="ceui-toast-close"
+         (click)="onCloseEvent()">
       <i class="ceui-font ceui-icon-close"></i>
     </div>
   </div>

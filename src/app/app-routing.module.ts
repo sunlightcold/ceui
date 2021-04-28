@@ -31,6 +31,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/cascader/cascader.module').then(module => module.CascaderModule),
   },
   {
+    path: 'cdk',
+    loadChildren: () => import('./modules/cdk/cdk.module').then(module => module.CdkModule),
+  },
+  {
     path: '',
     redirectTo: 'cascader',
     pathMatch: 'full'

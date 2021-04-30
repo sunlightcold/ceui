@@ -1,26 +1,26 @@
 import { Observable, of, Subject } from 'rxjs';
 import { mergeAll, shareReplay, switchMap } from 'rxjs/operators';
 
-interface HttpCacheStorage {
+export interface HttpCacheStorage {
   setItem(key: string, item: Observable<any>): void;
   getItem(key: string): Observable<any> | undefined;
 }
 
-interface HttpCacheOptions {
+export interface HttpCacheOptions {
   storage: HttpCacheStorage;
   refreshSubject: Observable<unknown> | Subject<unknown>;
 }
 
-type HttpRequestCacheMethod = (...args: any[]) => Observable<any>;
+export type HttpRequestCacheMethod<U = any> = (...args: any[]) => Observable<U>;
 
-export function HttpRequestCache<T extends Record<string, any>>(
+export function HttpRequestCache<T extends Record<string, any>, U = any>(
   optionsHandler: (this: any) => HttpCacheOptions,
 ) {
   return (
     target: T,
     methodName: string,
-    descriptor: TypedPropertyDescriptor<HttpRequestCacheMethod>,
-  ): TypedPropertyDescriptor<HttpRequestCacheMethod> => {
+    descriptor: TypedPropertyDescriptor<HttpRequestCacheMethod<U>>,
+  ): TypedPropertyDescriptor<HttpRequestCacheMethod<U>> => {
 
     if (!(descriptor?.value instanceof Function)) {
       throw Error(
@@ -31,7 +31,7 @@ export function HttpRequestCache<T extends Record<string, any>>(
     const cacheKeyPrefix = `${target.constructor.name}_${methodName}`;
     const originalMethod = descriptor.value;
 
-    descriptor.value = function(...args: any[]): Observable<any> {
+    descriptor.value = function(...args: any[]): Observable<U> {
       const { storage, refreshSubject } = optionsHandler.call(this);
 
       const key = `${cacheKeyPrefix}_${JSON.stringify(args)}`;

@@ -15,13 +15,13 @@ export class UserService {
 
   public readonly refreshSubject = new Subject();
 
-  @HttpRequestCache<UserService>(function() {
+  @HttpRequestCache<UserService, string[]>(function() {
     return {
       storage: this.cache,
       refreshSubject: this.refreshSubject,
     };
   })
-  getUserPoles(): Observable<any[]> {
+  getUserPoles(): Observable<string[]> {
     return this.userApi.getUserPoles();
   }
 

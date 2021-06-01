@@ -4,7 +4,10 @@ import { EventManager, EVENT_MANAGER_PLUGINS } from '@angular/platform-browser';
 const CeuiEvent = ['outZone', 'once', 'passive'];
 
 /**
- * 运行于 ngZone 之外的事件管理器
+ * 额外的事件管理器
+ * outZone，运行于 ngZone 之外
+ * once 只监听一次事件
+ * passive passive 参数
  */
 @Injectable()
 export class CeuiEventPluginService {

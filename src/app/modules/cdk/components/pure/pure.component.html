@@ -1,0 +1,6 @@
+<p>
+  <button (click)="show = !show">计算</button>
+</p>
+<p *ngIf="show">calculate {{ calculate(40) }}</p>
+
+<p *ngIf="show">calculate (not pure) {{ calculate1(40) }}</p>

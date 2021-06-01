@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CeuiDataSource } from 'projects/cdk';
 
 @Component({
   selector: 'app-root',

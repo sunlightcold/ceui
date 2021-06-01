@@ -1,15 +1,14 @@
-import { Component, OnInit, AfterContentChecked } from '@angular/core';
-import { interval, of } from 'rxjs';
-import { UserService } from '../../services/user.service';
-import { delay, mergeAll } from 'rxjs/operators';
+import { AfterContentChecked, Component, OnInit } from '@angular/core';
 import { CacheService } from '../../services/cache.service';
-
+import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.scss'],
 })
 export class DemoComponent implements OnInit, AfterContentChecked {
+  show = true;
+
   constructor(private userService: UserService, public readonly cache: CacheService) {}
 
   ngOnInit(): void {
@@ -19,7 +18,6 @@ export class DemoComponent implements OnInit, AfterContentChecked {
     //   console.log(this.cache);
     // });
     // // });
-
     // const a$ = of(1000).pipe(delay(2000));
     // const b$ = of(2000).pipe(delay(3000));
     // of(a$, b$)
@@ -29,7 +27,7 @@ export class DemoComponent implements OnInit, AfterContentChecked {
     //   });
   }
 
-  onClick(event: MouseEvent, arg1: string, arg2: string) {
+  onClick(event: Event, arg1: string, arg2: string) {
     console.log(event, 'clickEvent', arg1, arg2);
   }
 

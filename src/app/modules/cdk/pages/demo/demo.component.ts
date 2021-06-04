@@ -1,4 +1,11 @@
-import { AfterContentChecked, Component, OnInit } from '@angular/core';
+import {
+  AfterContentChecked,
+  ApplicationRef,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { PureComponent } from '../../components/pure/pure.component';
 import { CacheService } from '../../services/cache.service';
 import { UserService } from '../../services/user.service';
 @Component({
@@ -9,7 +16,11 @@ import { UserService } from '../../services/user.service';
 export class DemoComponent implements OnInit, AfterContentChecked {
   show = true;
 
-  constructor(private userService: UserService, public readonly cache: CacheService) {}
+  constructor(
+    private userService: UserService,
+    public readonly cache: CacheService,
+    public applicationRef: ApplicationRef,
+  ) {}
 
   ngOnInit(): void {
     // // interval(2000).subscribe(() => {
@@ -32,6 +43,6 @@ export class DemoComponent implements OnInit, AfterContentChecked {
   }
 
   ngAfterContentChecked() {
-    console.log('trigger checked');
+    // console.log('trigger checked');
   }
 }

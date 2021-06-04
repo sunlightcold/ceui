@@ -1,15 +1,38 @@
-import { Component, OnInit, AfterContentChecked, AfterViewChecked } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterContentChecked,
+  AfterViewChecked,
+  Input,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ceuiPure } from '@ceui/cdk';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-pure',
   templateUrl: './pure.component.html',
   styleUrls: ['./pure.component.scss'],
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PureComponent implements OnInit, AfterContentChecked, AfterViewChecked {
   show = true;
 
-  constructor() {}
+  num = 40;
+
+  @ceuiPure
+  get sum() {
+    console.log('getter be invoked');
+    return Math.pow(this.num, 2);
+  }
+
+  get sum1() {
+    console.log('getter be invoked not pure');
+    return Math.pow(this.num, 2);
+  }
+
+  constructor(private changeDetectorRef: ChangeDetectorRef) {
+  }
 
   ngOnInit() {}
 

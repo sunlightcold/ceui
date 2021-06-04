@@ -1,6 +1,11 @@
 <p>
   <button (click)="show = !show">计算</button>
+  <input type="number" [(ngModel)]="num">
 </p>
-<p *ngIf="show">calculate {{ calculate(40) }}</p>
+<p *ngIf="show">calculate {{ calculate(num) }}</p>
 
-<p *ngIf="show">calculate (not pure) {{ calculate1(40) }}</p>
+<p *ngIf="show">calculate (not pure) {{ calculate1(num) }}</p>
+
+<p *ngIf="show">getter{{ sum }}</p>
+
+<p *ngIf="show">getter（not pure）{{ sum1 }}</p>

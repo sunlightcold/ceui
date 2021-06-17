@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BasicComponent } from './components/basic/basic.component';
 import { CeuiTabsModule } from '@ceui/core/components';
 import { DemoComponent } from './pages/demo/demo.component';
-import { TabsRoutingRoutes } from './tabs-routing.routing';
+import { TabsRoutingModule } from './tabs-routing.module';
+import { CodeModule } from '../code/code.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TabsRoutingRoutes } from './tabs-routing.routing';
   imports: [
     CommonModule,
     CeuiTabsModule,
-    TabsRoutingRoutes,
+    TabsRoutingModule,
+    CodeModule,
   ],
 })
 export class TabsModule { }

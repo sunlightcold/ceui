@@ -13,4 +13,4 @@ const routes: Routes = [
   },
 ];
 
-export const TabsRoutingRoutes = RouterModule.forChild(routes);
+export const TabsRoutingModule = RouterModule.forChild(routes);

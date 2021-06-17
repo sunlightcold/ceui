@@ -1,0 +1,12 @@
+<ng-content></ng-content>
+<div class="code-expand">
+  <i class="ceui-font ceui-icon-arrow-down" *ngIf="expand; else shrink" (click)="expand = !expand"></i>
+  <ng-template #shrink>
+    <i class="ceui-font ceui-icon-arrow-right" (click)="expand = !expand"></i>
+  </ng-template>
+</div>
+<ceui-tab-group *ngIf="expand">
+  <ceui-tab *ngFor="let source of sources" [label]="source.title">
+    <app-highlight [language]="source.language" [code]="source.code.default"></app-highlight>
+  </ceui-tab>
+</ceui-tab-group>

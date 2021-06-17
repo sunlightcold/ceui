@@ -1,0 +1,30 @@
+
+@import '../../projects/core/styles/theme';
+
+.demo-container {
+  position: relative;
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+
+.demo-content {
+  margin-right: 200px;
+}
+
+.demo-example {
+  margin-bottom: 20px;
+}
+
+.demo-title {
+  font-size: 15px;
+  color: $ceui-text-color;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.demo-text {
+  font-size: 14px;
+  color: $ceui-text-color;
+  line-height: 24px;
+}

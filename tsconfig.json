@@ -15,6 +15,9 @@
       ],
       "@ceui/core/*": [
         "projects/core/*",
+      ],
+      "@app/*": [
+        "src/app/modules/*",
       ]
     },
     "outDir": "./dist/out-tsc",

@@ -1,0 +1,22 @@
+@import '../../styles/theme';
+
+.ceui-accordion-list {
+  box-shadow: $ceui-box-shadow;
+  font-size: $ceui-font-size;
+  color: $ceui-text-color;
+  border-radius: $ceui-border-radius;
+  padding: 10px 0;
+  display: inline-block;
+  min-width: 120px;
+}
+
+.ceui-accordion-item {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.ceui-accordion-item:hover {
+  background-color: $ceui-hover-bg;
+}

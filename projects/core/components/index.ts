@@ -5,3 +5,6 @@ export * from '@ceui/core/components/input';
 export * from '@ceui/core/components/form-field';
 export * from '@ceui/core/components/toast';
 export * from '@ceui/core/components/cascader';
+export * from '@ceui/core/components/accordion';
+export * from '@ceui/core/components/dialog';
+export * from '@ceui/core/components/icon';

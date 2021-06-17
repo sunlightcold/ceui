@@ -22,3 +22,5 @@ $ceui-readonly-bg: var(--ceui-readonly-bg, #fafafa);                        // �
 $ceui-disabled-color: var(--ceui-disabled-color, rgba(0,0,0,.38));                        // 禁用背景颜色
 $ceui-readonly-color: var(--ceui-readonly-color, rgba(0,0,0,.38));                        // 只读背景颜色
 
+$ceui-hover-bg: var(--ceui-active-bg, #f2f5fc);                                  // hover 状态背景色
+

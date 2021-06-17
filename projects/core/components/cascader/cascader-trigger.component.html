@@ -3,7 +3,7 @@
     *ngIf="isOpened"
     [style.width]="panelWidth">
   <ng-container [ngTemplateOutlet]="childTemplate"
-                [ngTemplateOutletContext]="{ list: options, level: 0 }"></ng-container>
+                [ngTemplateOutletContext]="{ list: data, level: 0 }"></ng-container>
 </ul>
 
 <ng-template #childTemplate

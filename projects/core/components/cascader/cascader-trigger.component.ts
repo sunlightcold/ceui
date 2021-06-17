@@ -71,10 +71,10 @@ export class CeuiCascaderTriggerComponent {
   }
 
   @Input()
-  get options(): any[] {
+  get data(): any[] {
     return this._options$.value;
   }
-  set options(options: any[]) {
+  set data(options: any[]) {
     this._options$.next(options || []);
 
     if (!this._renderChangesSubscription) {

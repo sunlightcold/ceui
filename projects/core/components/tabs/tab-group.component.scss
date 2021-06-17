@@ -1,9 +1,10 @@
 @import '../../styles/theme';
 
-$ceui-tab-label-padding: 10px 20px;             // tab label 内间距
-$ceui-tab-labels-border: 2px solid #e3e3e3;   // tabs 边距
-$ceui-label-link-bar-height: 2px;               // tab link bar height
-$ceui-tab-labels-font-weight: 500;              //  tab labels font-weight
+$ceui-tab-label-padding: 10px 20px;               // tab label 内间距
+$ceui-tab-labels-border: 1.5px solid #e3e3e3;   // tabs 底边框
+$ceui-label-link-bar-height: 2px;                 // tab link bar height
+$ceui-tab-labels-font-weight: 500;                // tab labels font-weight
+$ceui-tab-content-padding: 20px 0;                // tab content 内边距
 
 // tab 对齐方式结构样式
 @mixin tab-item-wrapper($child) {
@@ -44,6 +45,10 @@ $ceui-tab-labels-font-weight: 500;              //  tab labels font-weight
       color: $ceui-disabled-bg;
       cursor: not-allowed;
     }
+  }
+
+  .ceui-tab-content {
+    padding: $ceui-tab-content-padding;
   }
 
   .ceui-label-link-bar {

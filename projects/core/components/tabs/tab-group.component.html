@@ -6,7 +6,7 @@
          [class.ceui-tab-label-active]="tab.templateRef === selectedTabTemplateRef"
          [class.ceui-tab-label-disabled]="tab.disabled"
          (click)="!tab.disabled && onSelectTab(i)">
-      <div class="mat-tab-label-content">
+      <div class="ceui-tab-label-content">
         <ng-template [ngIf]="tab.templateLabel">
           <ng-container *ngTemplateOutlet="tab.templateLabel.templateRef"></ng-container>
         </ng-template>
@@ -17,5 +17,7 @@
   </div>
   <div class="ceui-label-link-bar"
        #linkBar></div>
-  <ng-container *ngTemplateOutlet="selectedTabTemplateRef"></ng-container>
+  <div class="ceui-tab-content">
+    <ng-container *ngTemplateOutlet="selectedTabTemplateRef"></ng-container>
+  </div>
 </div>

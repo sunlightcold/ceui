@@ -6,6 +6,7 @@ import { BasicComponent } from './components/basic/basic.component';
 import { CloseComponent } from './components/close/close.component';
 import { WithoutIconComponent } from './components/without-icon/without-icon.component';
 import { DemoComponent } from './pages/demo/demo.component';
+import { CodeModule } from '@app/code';
 
 @NgModule({
   declarations: [BasicComponent, CloseComponent, WithoutIconComponent, DemoComponent],
@@ -13,6 +14,7 @@ import { DemoComponent } from './pages/demo/demo.component';
     CommonModule,
     AlertRoutingModule,
     CeuiAlertModule,
+    CodeModule,
   ]
 })
 export class AlertModule { }

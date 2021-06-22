@@ -1,6 +1,32 @@
 
 @import '../../projects/core/styles/theme';
 
+header {
+  h1 {
+    padding: 10px;
+    box-shadow: $ceui-box-shadow;
+    color: #252b3a;
+  }
+}
+
+.content {
+  display: flex;
+
+  aside {
+    color: $ceui-text-gray-color;
+    h4 {
+      padding: 10px;
+    }
+    border-right: 1px solid #eee;
+  }
+
+  main {
+    padding: 10px;
+    flex: 1;
+    margin: 0 100px ;
+  }
+}
+
 .demo-container {
   position: relative;
   padding-bottom: 30px;

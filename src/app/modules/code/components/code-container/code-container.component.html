@@ -4,6 +4,7 @@
   <ng-template #shrink>
     <i class="ceui-font ceui-icon-arrow-right" (click)="expand = !expand"></i>
   </ng-template>
+  code
 </div>
 <ceui-tab-group *ngIf="expand">
   <ceui-tab *ngFor="let source of sources" [label]="source.title">

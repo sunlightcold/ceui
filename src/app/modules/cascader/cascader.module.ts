@@ -6,6 +6,7 @@ import { BasicComponent } from './components/basic/basic.component';
 import { DemoComponent } from './pages/demo/demo.component';
 import { CeuiCascaderModule, CeuiFormFieldModule, CeuiInputModule } from '@ceui/core/components';
 import { FormsModule } from '@angular/forms';
+import { CodeModule } from '@app/code';
 
 @NgModule({
   declarations: [BasicComponent, DemoComponent],
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     CeuiFormFieldModule,
     CeuiInputModule,
     FormsModule,
+    CodeModule,
   ]
 })
 export class CascaderModule { }

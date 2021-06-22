@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "ceui-font"; /* Project id 2419331 */
+  src: url('iconfont.woff2?t=1624266416550') format('woff2'),
+       url('iconfont.woff?t=1624266416550') format('woff'),
+       url('iconfont.ttf?t=1624266416550') format('truetype');
+}
+
+.ceui-font {
+  font-family: "ceui-font" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ceui-icon-arrow-left:before {
+  content: "\e685";
+}
+
+.ceui-icon-arrow-up:before {
+  content: "\e686";
+}
+
+.ceui-icon-arrow-down:before {
+  content: "\e687";
+}
+
+.ceui-icon-arrow-right:before {
+  content: "\e688";
+}
+
+.ceui-icon-close:before {
+  content: "\e615";
+}
+
+.ceui-icon-warning:before {
+  content: "\e8bd";
+}
+
+.ceui-icon-primary:before {
+  content: "\e63d";
+}
+
+.ceui-icon-error:before {
+  content: "\e658";
+}
+
+.ceui-icon-success:before {
+  content: "\e618";
+}
+

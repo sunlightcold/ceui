@@ -35,9 +35,13 @@ const routes: Routes = [
     loadChildren: () => import('./modules/cdk/cdk.module').then(module => module.CdkModule),
   },
   {
+    path: 'accordion',
+    loadChildren: () => import('./modules/accordion/accordion.module').then(module => module.AccordionModule),
+  },
+  {
     path: '',
-    redirectTo: 'cascader',
-    pathMatch: 'full'
+    redirectTo: 'accordion',
+    pathMatch: 'full',
   }
 ];
 

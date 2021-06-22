@@ -4,6 +4,7 @@ import { CardRoutingModule } from './card-routing.module';
 import { BasicComponent } from './components/basic/basic.component';
 import { DemoComponent } from './pages/demo/demo.component';
 import { CeuiCardModule } from '@ceui/core/components';
+import { CodeModule } from '@app/code';
 
 @NgModule({
   declarations: [BasicComponent, DemoComponent],
@@ -11,6 +12,7 @@ import { CeuiCardModule } from '@ceui/core/components';
     CommonModule,
     CardRoutingModule,
     CeuiCardModule,
+    CodeModule,
   ]
 })
 export class CardModule { }

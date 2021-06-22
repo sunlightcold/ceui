@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ToastRoutingModule } from './toast-routing.module';
+import { AccordionRoutingModule } from './accordion-routing.module';
 import { BasicComponent } from './components/basic/basic.component';
 import { DemoComponent } from './pages/demo/demo.component';
-import { CeuiToastModule } from '@ceui/core/components';
+import { CeuiAccordionModule } from '@ceui/core/components';
 import { CodeModule } from '@app/code';
 
 @NgModule({
-  declarations: [BasicComponent, DemoComponent],
+  declarations: [
+    BasicComponent,
+    DemoComponent,
+  ],
   imports: [
     CommonModule,
-    ToastRoutingModule,
-    CeuiToastModule,
+    AccordionRoutingModule,
+    CeuiAccordionModule,
     CodeModule,
-  ],
-  providers: [
   ]
 })
-export class ToastModule { }
+export class AccordionModule { }

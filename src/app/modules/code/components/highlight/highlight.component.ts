@@ -27,7 +27,6 @@ export class HighlightComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     Promise.resolve().then(() => {
-      Highlight.highlightBlock(this.codeEl.nativeElement);
       const code = Highlight.highlightAuto(this.code, [this.language]);
       this.code = code.value;
     });

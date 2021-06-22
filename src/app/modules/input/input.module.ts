@@ -1,3 +1,4 @@
+import { CodeModule } from '@app/code';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     InputRoutingModule,
     CeuiInputModule,
     FormsModule,
+    CodeModule
   ]
 })
 export class InputModule { }

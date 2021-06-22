@@ -6,6 +6,7 @@ import { BasicComponent } from './components/basic/basic.component';
 import { DemoComponent } from './pages/demo/demo.component';
 import { CeuiFormFieldModule, CeuiInputModule, CeuiCascaderModule } from '@ceui/core/components';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CodeModule } from '@app/code';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     CeuiCascaderModule,
+    CodeModule,
   ]
 })
 export class FormFieldModule { }

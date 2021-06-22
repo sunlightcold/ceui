@@ -1,3 +1,25 @@
-<app-basic></app-basic>
-<app-without-icon></app-without-icon>
-<app-close></app-close>
+<div class="demo-container">
+  <div class="demo-example">
+    <div class="demo-title">基础用法</div>
+    <div class="demo-text"></div>
+    <app-code-container [sources]="basicSources">
+      <app-basic></app-basic>
+    </app-code-container>    
+  </div>
+
+  <div class="demo-example">
+    <div class="demo-title">不使用默认图标</div>
+    <div class="demo-text"></div>
+    <app-code-container [sources]="withoutIconSources">
+      <app-without-icon></app-without-icon>
+    </app-code-container>    
+  </div>
+
+  <div class="demo-example">
+    <div class="demo-title">可关闭</div>
+    <div class="demo-text"></div>
+    <app-code-container [sources]="closeSources">
+      <app-close></app-close>
+    </app-code-container>    
+  </div>
+</div>

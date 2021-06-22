@@ -1,7 +1,7 @@
-$ceui-error: var(--ceui-danger, #f44336);                         // 失败、错误、告警
-$ceui-warning: var(--ceui-warning, #fac20a);                      // 警告、需注意类型提示
-$ceui-success: var(--ceui-success, #50d4ab);                      // 成功、正确
-$ceui-primary: var(--ceui-primary, #3f51b5);                      // 通知、一般提示、执行中
+$ceui-error: var(--ceui-danger, #f44336);                                    // 失败、错误、告警
+$ceui-warning: var(--ceui-warning, #fac20a);                                 // 警告、需注意类型提示
+$ceui-success: var(--ceui-success, #50d4ab);                                 // 成功、正确
+$ceui-primary: var(--ceui-primary, #3f51b5);                                 // 通知、一般提示、执行中
 
 $ceui-error-bg: var(--ceui-danger-bg, rgba(#f44336, .3));                   // 失败、错误、告警背景色
 $ceui-warning-bg: var(--ceui-warning-bg, rgba(#fac20a, .3));                // 警告、需注意类型提示背景色
@@ -15,12 +15,14 @@ $ceui-success-line: var(--ceui-success-line, rgba(#50d4ab, .5));                
 $ceui-primary-line: var(--ceui-primary-line, rgba(#3f51b5, .5));                // 通知、一般提示、执行中边框颜色
 
 $ceui-text-color: var(--ceui-text-color, #252b3a);                             // 正文字体颜色
+$ceui-text-gray-color: var(--ceui-text-gray-color, #575d6c);                   // 灰色阶字体颜色
 
 $ceui-disabled-bg: var(--ceui-disabled-bg, #fafafa);                        // 禁用背景颜色
 $ceui-readonly-bg: var(--ceui-readonly-bg, #fafafa);                        // 只读背景颜色
 
-$ceui-disabled-color: var(--ceui-disabled-color, rgba(0,0,0,.38));                        // 禁用背景颜色
-$ceui-readonly-color: var(--ceui-readonly-color, rgba(0,0,0,.38));                        // 只读背景颜色
+$ceui-disabled-color: var(--ceui-disabled-color, rgba(0,0,0,.38));                        // 禁用颜色
+$ceui-readonly-color: var(--ceui-readonly-color, rgba(0,0,0,.38));                        // 只读颜色
 
-$ceui-hover-bg: var(--ceui-active-bg, #f2f5fc);                                  // hover 状态背景色
+$ceui-hover-bg: var(--ceui-hover-bg, #f2f5fc);                                     // hover 状态背景色
+$ceui-active-color: var(--ceui-active-bg, #6b74cc);                                // active 颜色
 

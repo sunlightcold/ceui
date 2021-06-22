@@ -1,7 +1,5 @@
-<div class="ceui-accordion">
-  <ul class="ceui-accordion-list">
-    <li class="ceui-accordion-item" *ngFor="let item of data">
-      {{ item.title }}
-    </li>
-  </ul>
-</div>
+<ul class="ceui-accordion box-shadow-{{ menuType }}">
+  <li class="ceui-accordion-list" *ngFor="let item of data">
+    <ceui-accordion-menu [data]="item"></ceui-accordion-menu>
+  </li>
+</ul>

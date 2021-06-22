@@ -1,22 +1,53 @@
 @import '../../styles/theme';
 
-.ceui-accordion-list {
-  box-shadow: $ceui-box-shadow;
-  font-size: $ceui-font-size;
+.ceui-accordion {
+  font-size: $ceui-font-size-xs;
   color: $ceui-text-color;
   border-radius: $ceui-border-radius;
   padding: 10px 0;
   display: inline-block;
-  min-width: 120px;
+  min-width: 200px;
 }
 
-.ceui-accordion-item {
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
-  cursor: pointer;
+.box-shadow-normal {
+  box-shadow: $ceui-box-shadow;
 }
 
-.ceui-accordion-item:hover {
-  background-color: $ceui-hover-bg;
+:host::ng-deep {
+  .ceui-accordion-title {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    cursor: pointer;
+    @include ceui-text-ellipsis;
+    position: relative;
+  }
+
+  [depth="0"] {
+    font-weight: 600;
+    color: $ceui-text-gray-color;
+  }
+
+  .ceui-accordion-expand {
+    position: absolute;
+    right: 10px;
+    > i {
+      font-size: $ceui-font-size-sm;
+    }
+  }
+  
+  .ceui-accordion-title:not(.disabled):hover {
+    background-color: $ceui-hover-bg;
+  }
+
+  .ceui-accordion-title.active {
+    color: $ceui-active-color;
+    font-weight: 600;
+  }
+
+  .ceui-accordion-title.disabled {
+    background-color: $ceui-disabled-bg;
+    color: $ceui-disabled-color;
+    cursor: not-allowed;
+  }
 }

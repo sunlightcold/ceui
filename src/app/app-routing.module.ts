@@ -39,8 +39,12 @@ const routes: Routes = [
     loadChildren: () => import('./modules/accordion/accordion.module').then(module => module.AccordionModule),
   },
   {
+    path: 'button',
+    loadChildren: () => import('./modules/button/button.module').then(module => module.ButtonModule),
+  },
+  {
     path: '',
-    redirectTo: 'accordion',
+    redirectTo: 'alert',
     pathMatch: 'full',
   }
 ];

@@ -1,4 +1,3 @@
-import { Route } from '@angular/compiler/src/core';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { CeuiAccordionItemChange, CeuiAccordionOption } from '@ceui/core/components';
@@ -23,10 +22,13 @@ export class AppComponent {
           router: `alert`,
         },
         {
+          title: `Button 按钮`,
+          router: `button`,
+        },
+        {
           title: `Card 卡片`,
           router: `card`,
         },
-
         {
           title: `Dialog 弹窗`,
           router: `dialog`,

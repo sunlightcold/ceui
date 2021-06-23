@@ -11,8 +11,7 @@
     "component-selector": [
       true,
       "element",
-      "ceui",
-      "kebab-case"
+      "ceui"
     ]
   }
 }

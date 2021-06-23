@@ -1,0 +1,70 @@
+@import './core';
+@import './font';
+
+$ceui-btn-border-radius: 4px;
+
+.ceui-button-base {
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  white-space: nowrap;
+  text-decoration: none;
+  min-width: 64px;
+  height: 36px;
+  padding: 0 16px;
+  overflow: visible;
+  border-radius: $ceui-btn-border-radius;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: $ceui-font-size-sm;
+  background-color: transparent;
+}
+.ceui-button-base[disabled] {
+  cursor: not-allowed;
+}
+
+.ceui-button.ceui-primary {
+  color: $ceui-primary;
+}
+.ceui-button.ceui-error {
+  color: $ceui-error;
+}
+.ceui-button.ceui-warning {
+  color: $ceui-warning;
+}
+.ceui-button.ceui-success {
+  color: $ceui-success;
+}
+.ceui-button[disabled] {
+  color: $ceui-disabled-color;
+}
+
+.ceui-full-button {
+  border: solid 1px currentColor;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+.ceui-full-button:hover:not([disabled]) {
+  box-shadow: $ceui-box-shadow;
+}
+.ceui-full-button.ceui-primary,
+.ceui-full-button.ceui-error,
+.ceui-full-button.ceui-warning,
+.ceui-full-button.ceui-success {
+  color: #fff;
+}
+.ceui-full-button.ceui-primary {
+  background-color: $ceui-primary;
+}
+.ceui-full-button.ceui-error {
+  background-color: $ceui-error;
+}
+.ceui-full-button.ceui-warning {
+  background-color: $ceui-warning;
+}
+.ceui-full-button.ceui-success {
+  background-color: $ceui-success;
+}
+.ceui-full-button[disabled] {
+  background-color: $ceui-disabled-bg;
+  color: $ceui-disabled-color;
+}

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ToastRoutingModule } from './toast-routing.module';
 import { BasicComponent } from './components/basic/basic.component';
 import { DemoComponent } from './pages/demo/demo.component';
-import { CeuiToastModule } from '@ceui/core/components';
+import { CeuiButtonModule, CeuiToastModule } from '@ceui/core/components';
 import { CodeModule } from '@app/code';
 
 @NgModule({
@@ -14,6 +14,7 @@ import { CodeModule } from '@app/code';
     ToastRoutingModule,
     CeuiToastModule,
     CodeModule,
+    CeuiButtonModule,
   ],
   providers: [
   ]

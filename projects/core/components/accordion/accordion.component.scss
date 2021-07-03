@@ -21,6 +21,7 @@
     cursor: pointer;
     @include ceui-text-ellipsis;
     position: relative;
+    user-select: none;
   }
 
   [depth="0"] {

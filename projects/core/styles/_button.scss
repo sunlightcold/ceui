@@ -1,5 +1,5 @@
-@import './core';
-@import './font';
+@import "./core";
+@import "./font";
 
 $ceui-btn-border-radius: 4px;
 
@@ -19,7 +19,8 @@ $ceui-btn-border-radius: 4px;
   font-size: $ceui-font-size-sm;
   background-color: transparent;
 }
-.ceui-button-base[disabled] {
+.ceui-button-base[disabled],
+.ceui-button-base.disabled {
   cursor: not-allowed;
 }
 
@@ -35,7 +36,8 @@ $ceui-btn-border-radius: 4px;
 .ceui-button.ceui-success {
   color: $ceui-success;
 }
-.ceui-button[disabled] {
+.ceui-button[disabled],
+.ceui-button.disabled {
   color: $ceui-disabled-color;
 }
 
@@ -43,9 +45,10 @@ $ceui-btn-border-radius: 4px;
   border: solid 1px currentColor;
   border-color: rgba(0, 0, 0, 0.12);
 }
-.ceui-full-button:hover:not([disabled]) {
+.ceui-full-button:hover:not([disabled], .disabled) {
   box-shadow: $ceui-box-shadow;
 }
+
 .ceui-full-button.ceui-primary,
 .ceui-full-button.ceui-error,
 .ceui-full-button.ceui-warning,
@@ -64,7 +67,8 @@ $ceui-btn-border-radius: 4px;
 .ceui-full-button.ceui-success {
   background-color: $ceui-success;
 }
-.ceui-full-button[disabled] {
+.ceui-full-button[disabled],
+.ceui-full-button.disabled {
   background-color: $ceui-disabled-bg;
   color: $ceui-disabled-color;
 }

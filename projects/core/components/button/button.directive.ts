@@ -1,5 +1,5 @@
-import { HostBinding } from '@angular/core';
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostBinding } from '@angular/core';
+import { CanColor, CanDisabled } from '@ceui/core/common';
 import { MixinCeuiButtonBase } from './button-base';
 
 const BUTTON_HOST_ATTRIBUTES = ['ceui-button', 'ceui-full-button'];
@@ -11,7 +11,10 @@ const BUTTON_HOST_ATTRIBUTES = ['ceui-button', 'ceui-full-button'];
   },
   inputs: ['color', 'disabled'],
 })
-export class CeuiButton extends MixinCeuiButtonBase {
+export class CeuiButton extends MixinCeuiButtonBase implements CanDisabled, CanColor {
+  @HostBinding('class.disabled') get isDisabled() {
+    return this.disabled;
+  }
 
   constructor(_elementRef: ElementRef<HTMLButtonElement>) {
     super(_elementRef);

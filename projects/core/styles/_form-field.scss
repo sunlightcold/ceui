@@ -40,7 +40,7 @@ textarea.ceui-input[resize='vertical'] {
   margin: 2px;
 }
 
-.ceui-input:hover:not(:disabled):not(:read-only):not(._invalid) {
+.ceui-input:hover:not(:disabled, .ng-invalid, :read-only, ._invalid) {
   border-color: $ceui-primary;
 }
 

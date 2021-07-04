@@ -43,6 +43,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/button/button.module').then(module => module.ButtonModule),
   },
   {
+    path: 'tooltip',
+    loadChildren: () => import('./modules/tooltip/tooltip.module').then(module => module.TooltipModule),
+  },
+  {
     path: '',
     redirectTo: 'alert',
     pathMatch: 'full',

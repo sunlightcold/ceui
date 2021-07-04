@@ -1,0 +1,129 @@
+@import "../../styles/theme";
+
+@mixin triangle-top {
+  bottom: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #464d6e;
+}
+
+@mixin triangle-bottom {
+  top: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #464d6e;
+}
+
+@mixin triangle-left {
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 5px solid transparent;
+  border-left: 5px solid #464d6e;
+  border-bottom: 5px solid transparent;
+}
+
+@mixin triangle-right {
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 5px solid transparent;
+  border-right: 5px solid #464d6e;
+  border-bottom: 5px solid transparent;
+}
+
+:host {
+  display: inline-block;
+  position: relative;
+  background-color: #464d6e;
+  border-radius: $ceui-border-radius;
+  box-shadow: $ceui-box-shadow;
+  padding: 10px;
+  min-width: 100px;
+  color: #fff;
+  font-size: $ceui-font-size-xs;
+
+  .ceui-tooltip-arrow {
+    position: absolute;
+    height: 0;
+    width: 0;
+  }
+
+  &.bottom {
+    top: 5px;
+
+    .ceui-tooltip-arrow {
+      @include triangle-bottom();
+    }
+  }
+
+  &.top {
+    bottom: 5px;
+
+    .ceui-tooltip-arrow {
+      @include triangle-top();
+    }
+  }
+
+  &.right {
+    left: 5px;
+
+    .ceui-tooltip-arrow {
+      @include triangle-right();
+    }
+  }
+
+  &.left {
+    right: 5px;
+
+    .ceui-tooltip-arrow {
+      @include triangle-left();
+    }
+  }
+
+  &.topRight {
+    bottom: 5px;
+    left: -30px;
+
+    .ceui-tooltip-arrow {
+      @include triangle-top();
+    }
+  }
+
+  &.topLeft {
+    bottom: 5px;
+    right: -30px;
+    direction: rtl;
+
+    .ceui-tooltip-arrow {
+      @include triangle-top();
+    }
+
+    .ceui-tooltip-inner {
+      direction: ltr;
+    }
+  }
+
+  &.bottomLeft {
+    top: 5px;
+    right: -30px;
+    direction: rtl;
+
+    .ceui-tooltip-arrow {
+      @include triangle-bottom();
+    }
+
+    .ceui-tooltip-inner {
+      direction: ltr;
+    }
+  }
+
+  &.bottomRight {
+    top: 5px;
+    left: -30px;
+
+    .ceui-tooltip-arrow {
+      @include triangle-bottom();
+    }
+  }
+}

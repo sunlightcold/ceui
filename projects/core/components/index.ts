@@ -9,3 +9,4 @@ export * from '@ceui/core/components/accordion';
 export * from '@ceui/core/components/dialog';
 export * from '@ceui/core/components/icon';
 export * from '@ceui/core/components/button';
+export * from '@ceui/core/components/tooltip';

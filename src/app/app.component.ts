@@ -43,8 +43,12 @@ export class AppComponent {
           router: `tabs`,
         },
         {
-          title: `Toast 提示`,
+          title: `Toast 通知`,
           router: `toast`,
+        },
+        {
+          title: `Tooltip 提示`,
+          router: `tooltip`,
         },
       ],
     },

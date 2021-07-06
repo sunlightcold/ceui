@@ -54,6 +54,8 @@
 
     .ceui-tooltip-arrow {
       @include triangle-bottom();
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -62,6 +64,8 @@
 
     .ceui-tooltip-arrow {
       @include triangle-top();
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 

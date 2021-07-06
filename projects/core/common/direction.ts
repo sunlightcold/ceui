@@ -32,9 +32,9 @@ export function mixinDirection<T extends Constructor<any>>(
       switch (this.direction) {
         case 'top':
           return {
-            originX: 'start',
+            originX: 'center',
             originY: 'top',
-            overlayX: 'start',
+            overlayX: 'center',
             overlayY: 'bottom',
           };
         case 'right':
@@ -82,9 +82,9 @@ export function mixinDirection<T extends Constructor<any>>(
         case 'bottom':
         default:
           return {
-            originX: 'start',
+            originX: 'center',
             originY: 'bottom',
-            overlayX: 'start',
+            overlayX: 'center',
             overlayY: 'top',
           };
       }

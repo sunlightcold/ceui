@@ -193,7 +193,7 @@ textarea.ceui-input[resize=vertical] {
   height: 100%;
   margin: 2px;
 }
-.ceui-input:hover:not(:disabled):not(:read-only):not(._invalid) {
+.ceui-input:hover:not(:disabled, .ng-invalid, :read-only, ._invalid) {
   border-color: var(--ceui-primary, #3f51b5);
 }
 .ceui-input:focus:not(:disabled):not(:read-only) {
@@ -306,6 +306,73 @@ img {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+.ceui-button-base {
+  -webkit-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  white-space: nowrap;
+  text-decoration: none;
+  min-width: 64px;
+  height: 36px;
+  padding: 0 16px;
+  overflow: visible;
+  border-radius: 4px;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: var(--ceui-font-size-sm, 14px);
+  background-color: transparent;
+}
+.ceui-button-base[disabled],
+.ceui-button-base.disabled {
+  cursor: not-allowed;
+}
+.ceui-button.ceui-primary {
+  color: var(--ceui-primary, #3f51b5);
+}
+.ceui-button.ceui-error {
+  color: var(--ceui-danger, #f44336);
+}
+.ceui-button.ceui-warning {
+  color: var(--ceui-warning, #fac20a);
+}
+.ceui-button.ceui-success {
+  color: var(--ceui-success, #50d4ab);
+}
+.ceui-button[disabled],
+.ceui-button.disabled {
+  color: var(--ceui-disabled-color, rgba(0, 0, 0, 0.38));
+}
+.ceui-full-button {
+  border: solid 1px currentColor;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+.ceui-full-button:hover:not([disabled], .disabled) {
+  box-shadow: var(--ceui-box-shadow, 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12));
+}
+.ceui-full-button.ceui-primary,
+.ceui-full-button.ceui-error,
+.ceui-full-button.ceui-warning,
+.ceui-full-button.ceui-success {
+  color: #fff;
+}
+.ceui-full-button.ceui-primary {
+  background-color: var(--ceui-primary, #3f51b5);
+}
+.ceui-full-button.ceui-error {
+  background-color: var(--ceui-danger, #f44336);
+}
+.ceui-full-button.ceui-warning {
+  background-color: var(--ceui-warning, #fac20a);
+}
+.ceui-full-button.ceui-success {
+  background-color: var(--ceui-success, #50d4ab);
+}
+.ceui-full-button[disabled],
+.ceui-full-button.disabled {
+  background-color: var(--ceui-disabled-bg, #fafafa);
+  color: var(--ceui-disabled-color, rgba(0, 0, 0, 0.38));
 }
 .code {
   white-space: pre;

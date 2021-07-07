@@ -68,7 +68,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<button (click)=\"open('primary')\">primary</button>\r\n<button (click)=\"open('error')\">error</button>\r\n<button (click)=\"open('warning')\">warning</button>\r\n<button (click)=\"open('success')\">success</button>\r\n<button (click)=\"openSticky()\">sticky</button>\r\n<button (click)=\"openDirection('top')\">top</button>\r\n<button (click)=\"openDirection('right')\">right</button>\r\n<button (click)=\"openDirection('bottom')\">bottom</button>\r\n<button (click)=\"openDirection('left')\">left</button>\r\n<button (click)=\"openDirection('topRight')\">topRight</button>\r\n<button (click)=\"openDirection('bottomRight')\">bottomRight</button>\r\n<button (click)=\"openDirection('topLeft')\">topLeft</button>\r\n<button (click)=\"openDirection('bottomLeft')\">bottomLeft</button>\r\n<button (click)=\"openDirection('center')\">center</button>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<button ceui-full-button (click)=\"open('primary')\">primary</button>\r\n<button ceui-full-button (click)=\"open('error')\">error</button>\r\n<button ceui-full-button (click)=\"open('warning')\">warning</button>\r\n<button ceui-full-button (click)=\"open('success')\">success</button>\r\n<button ceui-full-button (click)=\"openSticky()\">sticky</button>\r\n<button ceui-full-button (click)=\"openDirection('top')\">top</button>\r\n<button ceui-full-button (click)=\"openDirection('right')\">right</button>\r\n<button ceui-full-button (click)=\"openDirection('bottom')\">bottom</button>\r\n<button ceui-full-button (click)=\"openDirection('left')\">left</button>\r\n<button ceui-full-button (click)=\"openDirection('topRight')\">topRight</button>\r\n<button ceui-full-button (click)=\"openDirection('bottomRight')\">bottomRight</button>\r\n<button ceui-full-button (click)=\"openDirection('topLeft')\">topLeft</button>\r\n<button ceui-full-button (click)=\"openDirection('bottomLeft')\">bottomLeft</button>\r\n<button ceui-full-button (click)=\"openDirection('center')\">center</button>\r\n");
 
 /***/ }),
 
@@ -121,6 +121,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasicComponent", function() { return BasicComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _ceui_core_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ceui/core/components */ "8t1I");
+/* harmony import */ var _projects_core_components_button_button_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../projects/core/components/button/button.directive */ "EiXb");
+
 
 
 class BasicComponent {
@@ -140,7 +142,7 @@ class BasicComponent {
     }
 }
 BasicComponent.ɵfac = function BasicComponent_Factory(t) { return new (t || BasicComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ceui_core_components__WEBPACK_IMPORTED_MODULE_1__["CeuiToastService"])); };
-BasicComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BasicComponent, selectors: [["app-basic"]], decls: 28, vars: 0, consts: [[3, "click"]], template: function BasicComponent_Template(rf, ctx) { if (rf & 1) {
+BasicComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BasicComponent, selectors: [["app-basic"]], decls: 28, vars: 0, consts: [["ceui-full-button", "", 3, "click"]], template: function BasicComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BasicComponent_Template_button_click_0_listener() { return ctx.open("primary"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "primary");
@@ -197,7 +199,7 @@ BasicComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BasicComponent_Template_button_click_26_listener() { return ctx.openDirection("center"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "center");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiYXNpYy5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, directives: [_projects_core_components_button_button_directive__WEBPACK_IMPORTED_MODULE_2__["CeuiButton"]], styles: [".ceui-button-base[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcLi5cXGJhc2ljLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBQTtBQUNGIiwiZmlsZSI6ImJhc2ljLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNldWktYnV0dG9uLWJhc2Uge1xyXG4gIG1hcmdpbjogMTBweDtcclxufSJdfQ== */"] });
 
 
 /***/ }),
@@ -234,11 +236,13 @@ ToastModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInject
             _toast_routing_module__WEBPACK_IMPORTED_MODULE_1__["ToastRoutingModule"],
             _ceui_core_components__WEBPACK_IMPORTED_MODULE_4__["CeuiToastModule"],
             _app_code__WEBPACK_IMPORTED_MODULE_5__["CodeModule"],
+            _ceui_core_components__WEBPACK_IMPORTED_MODULE_4__["CeuiButtonModule"],
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](ToastModule, { declarations: [_components_basic_basic_component__WEBPACK_IMPORTED_MODULE_2__["BasicComponent"], _pages_demo_demo_component__WEBPACK_IMPORTED_MODULE_3__["DemoComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
         _toast_routing_module__WEBPACK_IMPORTED_MODULE_1__["ToastRoutingModule"],
         _ceui_core_components__WEBPACK_IMPORTED_MODULE_4__["CeuiToastModule"],
-        _app_code__WEBPACK_IMPORTED_MODULE_5__["CodeModule"]] }); })();
+        _app_code__WEBPACK_IMPORTED_MODULE_5__["CodeModule"],
+        _ceui_core_components__WEBPACK_IMPORTED_MODULE_4__["CeuiButtonModule"]] }); })();
 
 
 /***/ })

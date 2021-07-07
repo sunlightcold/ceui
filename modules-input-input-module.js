@@ -72,7 +72,7 @@ BasicComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCom
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import { Component, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'app-basic',\n  templateUrl: './basic.component.html',\n  styleUrls: ['./basic.component.scss']\n})\nexport class BasicComponent implements OnInit {\n  value!: string;\n\n  control = new FormControl();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  onNgModelChange(value: string) {\n    console.log(value);\n  }\n\n}\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import { Component, OnInit } from '@angular/core';\r\nimport { FormControl } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'app-basic',\r\n  templateUrl: './basic.component.html',\r\n  styleUrls: ['./basic.component.scss']\r\n})\r\nexport class BasicComponent implements OnInit {\r\n  value!: string;\r\n\r\n  control = new FormControl();\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n  onNgModelChange(value: string) {\r\n    console.log(value);\r\n  }\r\n\r\n}\r\n");
 
 /***/ }),
 
@@ -132,7 +132,7 @@ DemoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>\n  <ceui-input [(ngModel)]=\"value\" [required]=\"true\" placeholder=\"大尺寸\" [readonly]=\"true\" size=\"lg\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\n</p>\n<p>\n  <ceui-input [(ngModel)]=\"value\" placeholder=\"中等尺寸\" [readonly]=\"true\" size=\"md\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\n</p>\n<p>\n  <ceui-input [(ngModel)]=\"value\" placeholder=\"小尺寸\" [readonly]=\"true\" size=\"sm\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\n</p>\n<p>\n  <ceui-input [(ngModel)]=\"value\" placeholder=\"超小尺寸\" [readonly]=\"true\" size=\"xs\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\n</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>\r\n  <ceui-input [(ngModel)]=\"value\" [required]=\"true\" placeholder=\"大尺寸\" [readonly]=\"true\" size=\"lg\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\r\n</p>\r\n<p>\r\n  <ceui-input [(ngModel)]=\"value\" placeholder=\"中等尺寸\" [readonly]=\"true\" size=\"md\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\r\n</p>\r\n<p>\r\n  <ceui-input [(ngModel)]=\"value\" placeholder=\"小尺寸\" [readonly]=\"true\" size=\"sm\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\r\n</p>\r\n<p>\r\n  <ceui-input [(ngModel)]=\"value\" placeholder=\"超小尺寸\" [readonly]=\"true\" size=\"xs\" (ngModelChange)=\"onNgModelChange($event)\"></ceui-input>\r\n</p>\r\n");
 
 /***/ }),
 

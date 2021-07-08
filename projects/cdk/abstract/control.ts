@@ -15,7 +15,13 @@ export class CeuiAbstractControl<T> implements ControlValueAccessor {
   /**
    * 先前的值
    */
-  private _preValue!: T;
+  get preValue() {
+    return this._preValue;
+  }
+  set preValue(value: T) {
+    this._preValue = value;
+  }
+  protected _preValue!: T;
 
   constructor(
     private readonly _ngControl: NgControl,
@@ -28,7 +34,7 @@ export class CeuiAbstractControl<T> implements ControlValueAccessor {
   }
 
   get value(): T {
-    return this._preValue;
+    return this.preValue;
   }
 
   get invalid(): boolean {
@@ -74,7 +80,7 @@ export class CeuiAbstractControl<T> implements ControlValueAccessor {
 
   writeValue(value: T | null) {
     this._updateLocalValue(
-      this._ngControl instanceof NgModel && this._preValue === undefined
+      this._ngControl instanceof NgModel && this.value === undefined
         ? this._ngControl.model
         : value,
     );
@@ -96,12 +102,11 @@ export class CeuiAbstractControl<T> implements ControlValueAccessor {
    * 更新控制器的值，在数据不发生变化时不会触发更新，一般用于在视图更新时调用
    * @param value 更新的值
    */
-  protected updateValue(value: T) {
+  updateValue(value: T) {
     if (this.disabled || this.valueSameComparator(this.value, value)) {
       return;
     }
-
-    this._preValue = value;
+    this.preValue = value;
     this._changeControlValue(value);
   }
 
@@ -119,7 +124,7 @@ export class CeuiAbstractControl<T> implements ControlValueAccessor {
    * @param value 更新的值
    */
   private _updateLocalValue(value: T) {
-    this._preValue = value;
+    this.preValue = value;
     this.checkControlUpdate();
   }
 

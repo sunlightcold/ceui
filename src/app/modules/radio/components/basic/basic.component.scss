@@ -1,0 +1,7 @@
+button {
+  margin: 10px 0;
+  display: inline-block;
+}
+button:not(:first-child) {
+  margin-left: 10px;
+}

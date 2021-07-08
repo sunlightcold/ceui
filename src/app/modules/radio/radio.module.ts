@@ -4,7 +4,8 @@ import { RadioRoutingModule } from './radio-routing.module';
 import { BasicComponent } from './components/basic/basic.component';
 import { DemoComponent } from './pages/demo/demo.component';
 import { CodeModule } from '@app/code';
-import { CeuiRadioModule } from '@ceui/core/components';
+import { CeuiButtonModule, CeuiRadioModule } from '@ceui/core/components';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,6 +15,8 @@ import { CeuiRadioModule } from '@ceui/core/components';
     RadioRoutingModule,
     CodeModule,
     CeuiRadioModule,
+    FormsModule,
+    CeuiButtonModule,
   ]
 })
 export class RadioModule { }

@@ -33,6 +33,7 @@
     box-sizing: border-box;
     top: 0;
     left: 0;
+    transition: border-color ease 280ms;
   }
 
   .ceui-radio-inner-circle {
@@ -43,6 +44,7 @@
     width: 20px;
     top: 0;
     left: 0;
+    transition: transform ease 280ms,background-color ease 280ms;
   }
 
   .ceui-radio-input {
@@ -56,11 +58,45 @@
 }
 
 .ceui-radio-checked {
-  .ceui-radio-outer-circle {
+  .ceui-radio-outer-primary {
+    border-color: $ceui-primary;
+  }
+  .ceui-radio-inner-primary {
+    background-color: $ceui-primary;
+  }
+  .ceui-radio-outer-warning {
     border-color: $ceui-warning;
   }
-
-  .ceui-radio-inner-circle {
+  .ceui-radio-inner-warning {
     background-color: $ceui-warning;
+  }
+  .ceui-radio-outer-error {
+    border-color: $ceui-error;
+  }
+  .ceui-radio-inner-error {
+    background-color: $ceui-error;
+  }
+  .ceui-radio-outer-success {
+    border-color: $ceui-success;
+  }
+  .ceui-radio-inner-success {
+    background-color: $ceui-success;
+  }
+}
+
+.ceui-radio-disabled {
+  .ceui-radio-label {
+    cursor: not-allowed;
+  }
+  .ceui-radio-outer-circle {
+    border-color: $ceui-disabled-color;
+  }
+  .ceui-radio-label-content {
+    color: $ceui-disabled-color;
+  }
+  &.ceui-radio-checked {
+    .ceui-radio-inner-circle {
+      background-color: $ceui-disabled-color;
+    }
   }
 }

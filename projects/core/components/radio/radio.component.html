@@ -1,12 +1,14 @@
 <label class="ceui-radio-label">
   <span class="ceui-radio-wrapper">
-    <span class="ceui-radio-outer-circle"></span>
-    <span class="ceui-radio-inner-circle"></span>
+    <span class="ceui-radio-outer-circle ceui-radio-outer-{{ color }}"></span>
+    <span class="ceui-radio-inner-circle ceui-radio-inner-{{ color }}"></span>
     <input class="ceui-radio-input"
            type="radio"
            [attr.name]="name"
+           [attr.value]="value"
+           [disabled]="disabled"
            (change)="onInputChange($event)"
-           (click)="onInputClick()">
+           (click)="onInputClick($event)">
   </span>
   <span class="ceui-radio-label-content">
     <ng-content></ng-content>

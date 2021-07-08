@@ -78,6 +78,10 @@ export class AppComponent {
           title: `Input 输入框`,
           router: `input`,
         },
+        {
+          title: `Radio 单选`,
+          router: `radio`,
+        }
       ],
     },
   ];

@@ -47,6 +47,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/tooltip/tooltip.module').then(module => module.TooltipModule),
   },
   {
+    path: 'radio',
+    loadChildren: () => import('./modules/radio/radio.module').then(module => module.RadioModule),
+  },
+  {
     path: '',
     redirectTo: 'alert',
     pathMatch: 'full',

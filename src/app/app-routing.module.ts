@@ -51,6 +51,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/radio/radio.module').then(module => module.RadioModule),
   },
   {
+    path: 'checkbox',
+    loadChildren: () => import('./modules/checkbox/checkbox.module').then(module => module.CheckboxModule),
+  },
+  {
     path: '',
     redirectTo: 'alert',
     pathMatch: 'full',

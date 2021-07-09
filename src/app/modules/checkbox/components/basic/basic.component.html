@@ -1,0 +1,12 @@
+<ceui-checkbox [checked]="true" (change)="onChange($event)">复选框</ceui-checkbox>
+<ceui-checkbox [indeterminate]="indeterminate" (change)="onChange($event)">未决状态</ceui-checkbox>
+<ceui-checkbox [disabled]="disabled" [checked]="true" (change)="onChange($event)">禁用</ceui-checkbox>
+<ceui-checkbox [(ngModel)]="selected" [checked]="true" (ngModelChange)="onNgModelChange($event)">ngModel</ceui-checkbox>
+<ceui-checkbox [formControl]="control" (ngModelChange)="onNgModelChange($event)">formControl</ceui-checkbox>
+<div>
+  <button ceui-full-button (click)="onGet()">get</button>
+  <button ceui-full-button (click)="onSet()">set</button>
+  <button ceui-full-button (click)="onDisabled()">disabled</button>
+  <button ceui-full-button (click)="onEnabled()">enabled</button>
+  <button ceui-full-button (click)="onIndeterminate()">indeterminate</button>
+</div>

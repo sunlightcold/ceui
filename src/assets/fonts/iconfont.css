@@ -1,8 +1,8 @@
 @font-face {
   font-family: "ceui-font"; /* Project id 2419331 */
-  src: url('iconfont.woff2?t=1624266416550') format('woff2'),
-       url('iconfont.woff?t=1624266416550') format('woff'),
-       url('iconfont.ttf?t=1624266416550') format('truetype');
+  src: url('iconfont.woff2?t=1625803937230') format('woff2'),
+       url('iconfont.woff?t=1625803937230') format('woff'),
+       url('iconfont.ttf?t=1625803937230') format('truetype');
 }
 
 .ceui-font {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.ceui-icon-unselected:before {
+  content: "\e633";
+}
+
+.ceui-icon-sousuo:before {
+  content: "\e669";
+}
+
+.ceui-icon-selected:before {
+  content: "\e690";
+}
+
+.ceui-icon-indeterminate:before {
+  content: "\e712";
 }
 
 .ceui-icon-arrow-left:before {

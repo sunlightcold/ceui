@@ -1,0 +1,60 @@
+@use '../../styles/theme';
+
+:host.ceui-checkbox {
+  display: inline-block;
+}
+
+.ceui-checkbox-label {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ceui-checkbox-wrapper {
+  height: 20px;
+  width: 20px;
+  padding-right: 8px;
+
+  .ceui-checkbox-input {
+    display: none;
+  }
+}
+
+.ceui-checkbox-frame {
+  font-size: 20px;
+  line-height: 20px;
+  transition: color ease 280ms;
+}
+
+.ceui-checkbox-label-content {
+  line-height: 20px;
+  height: inherit;
+  font-size: theme.$ceui-font-size;
+  color: theme.$ceui-text-color;
+}
+
+.ceui-checkbox-frame {
+  &.ceui-primary {
+    color: theme.$ceui-primary;
+  }
+  &.ceui-success {
+    color: theme.$ceui-success;
+  }
+  &.ceui-error {
+    color: theme.$ceui-error;
+  }
+  &.ceui-warning {
+    color: theme.$ceui-warning;
+  }
+}
+:host.ceui-checkbox-disabled {
+  .ceui-checkbox-frame,
+  .ceui-checkbox-label-content {
+    color: theme.$ceui-disabled-color;
+  }
+  .ceui-checkbox-label {
+    cursor: not-allowed;
+  }
+}

@@ -71,6 +71,10 @@ export class AppComponent {
           router: `cascader`,
         },
         {
+          title: `Checkbox 复选`,
+          router: `checkbox`,
+        },
+        {
           title: `FormField 表单字段`,
           router: `form-field`,
         },
@@ -81,7 +85,7 @@ export class AppComponent {
         {
           title: `Radio 单选`,
           router: `radio`,
-        }
+        },
       ],
     },
   ];

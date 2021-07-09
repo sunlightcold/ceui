@@ -1,0 +1,21 @@
+<label class="ceui-checkbox-label">
+  <span class="ceui-checkbox-wrapper">
+    <i class="ceui-{{ color }} ceui-checkbox-frame ceui-font"
+       [class.ceui-icon-selected]="checked && !indeterminate"
+       [class.ceui-icon-unselected]="!checked && !indeterminate"
+       [class.ceui-icon-indeterminate]="indeterminate"></i>
+    <input class="ceui-checkbox-input"
+           type="checkbox"
+           [id]="id"
+           [disabled]="disabled"
+           [checked]="checked"
+           [required]="required"
+           [attr.value]="value"
+           [attr.name]="name"
+           (click)="onInputClick($event)"
+           (change)="onInputChange($event)">
+  </span>
+  <span class="ceui-checkbox-label-content">
+    <ng-content></ng-content>
+  </span>
+</label>

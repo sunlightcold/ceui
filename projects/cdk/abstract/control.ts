@@ -49,7 +49,7 @@ export class CeuiAbstractControl<T> implements ControlValueAccessor {
     return this._getSafeNgControlProperty<boolean>(({ touched }) => touched, false);
   }
 
-  get disabled(): boolean {
+  get ngDisabled(): boolean {
     return this._getSafeNgControlProperty<boolean>(({ disabled }) => disabled, false);
   }
 
@@ -103,7 +103,7 @@ export class CeuiAbstractControl<T> implements ControlValueAccessor {
    * @param value 更新的值
    */
   updateValue(value: T) {
-    if (this.disabled || this.valueSameComparator(this.value, value)) {
+    if (this.ngDisabled || this.valueSameComparator(this.value, value)) {
       return;
     }
     this.preValue = value;

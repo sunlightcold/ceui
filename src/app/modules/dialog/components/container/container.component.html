@@ -1,0 +1,10 @@
+<div ceui-dialog-header >
+  {{data?.title}}
+</div>
+
+  <input ceui-input ceui-input-sm type="text" placeholder="输入任意值" #input>
+
+<div ceui-dialog-footer >
+  <button ceui-dialog-close ceui-button color="primary">取消</button>
+  <button (click)="onClick(input.value)" ceui-full-button color="primary">获取</button>
+</div>

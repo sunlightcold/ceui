@@ -55,9 +55,13 @@ const routes: Routes = [
     loadChildren: () => import('./modules/checkbox/checkbox.module').then(module => module.CheckboxModule),
   },
   {
+    path: 'dialog',
+    loadChildren: () => import('./modules/dialog/dialog.module').then(module => module.DialogModule),
+  },
+  {
     path: '',
-    redirectTo: 'alert',
-    pathMatch: 'full',
+    redirectTo: 'dialog',
+    pathMatch: 'full'
   }
 ];
 

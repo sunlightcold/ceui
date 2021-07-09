@@ -1,0 +1,33 @@
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '../../styles/theme';
+
+:host {
+  box-shadow: $ceui-box-shadow;
+  border-radius: $ceui-border-radius;
+  background: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 80vw;
+  color: rgba(0,0,0,.87);
+  padding: 15px;
+}
+
+:host::ng-deep {
+  .ceui-dialog-header {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+
+  }
+  .ceui-dialog-footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  .backdropClass{
+    //background-color: #ffffff;
+  }
+}
+

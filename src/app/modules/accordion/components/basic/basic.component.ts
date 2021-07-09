@@ -1,6 +1,5 @@
-import { CeuiAccordionMenuToggle } from './../../../../../../projects/core/components/accordion/accordion.model';
 import { Component, OnInit } from '@angular/core';
-import { CeuiAccordionItemChange, CeuiAccordionOption } from '@ceui/core/components';
+import { CeuiAccordionItemChange, CeuiAccordionMenuToggle, CeuiAccordionOption } from '@ceui/core/components';
 
 @Component({
   selector: 'app-basic',

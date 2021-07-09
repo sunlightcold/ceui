@@ -3831,11 +3831,6 @@ const routes = [
         path: 'checkbox',
         loadChildren: () => Promise.all(/*! import() | modules-checkbox-checkbox-module */[__webpack_require__.e("default~modules-accordion-accordion-module~modules-alert-alert-module~modules-button-button-module~m~da188221"), __webpack_require__.e("modules-checkbox-checkbox-module")]).then(__webpack_require__.bind(null, /*! ./modules/checkbox/checkbox.module */ "jeMh")).then(module => module.CheckboxModule),
     },
-    {
-        path: '',
-        redirectTo: 'alert',
-        pathMatch: 'full',
-    }
 ];
 class AppRoutingModule {
 }

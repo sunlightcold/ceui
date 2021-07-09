@@ -150,7 +150,7 @@ export abstract class CeuiRadioGroupBase
   private _updateRadioDisabled() {
     if (this.radios) {
       this.radios.forEach((radio) => {
-        radio.disabled = this.disabled;
+        radio.disabled = this.ngDisabled;
         radio.markForCheck();
       });
     }
@@ -173,6 +173,11 @@ export abstract class CeuiRadioGroupBase
 
   _emitChangeEvent() {
     this.change.emit(new CeuiRadioChange(this.selected!, this.value));
+  }
+
+  setDisabledState(disabled: boolean) {
+    this.disabled = disabled;
+    this.checkControlUpdate();
   }
 }
 

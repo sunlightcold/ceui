@@ -11,3 +11,4 @@ export * from '@ceui/core/components/icon';
 export * from '@ceui/core/components/button';
 export * from '@ceui/core/components/tooltip';
 export * from '@ceui/core/components/radio';
+export * from '@ceui/core/components/checkbox';

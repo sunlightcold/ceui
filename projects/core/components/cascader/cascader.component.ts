@@ -46,7 +46,7 @@ export class CeuiCascaderComponent
   @HostListener('click', ['$event'])
   clickEvent(event: MouseEvent) {
     event.stopPropagation();
-    if (!this.disabled) {
+    if (!this.ngDisabled) {
       this.trigger.openPanel();
     }
   }

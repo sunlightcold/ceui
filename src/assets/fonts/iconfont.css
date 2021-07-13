@@ -1,8 +1,8 @@
 @font-face {
   font-family: "ceui-font"; /* Project id 2419331 */
-  src: url('iconfont.woff2?t=1625803937230') format('woff2'),
-       url('iconfont.woff?t=1625803937230') format('woff'),
-       url('iconfont.ttf?t=1625803937230') format('truetype');
+  src: url('iconfont.woff2?t=1626160840759') format('woff2'),
+       url('iconfont.woff?t=1626160840759') format('woff'),
+       url('iconfont.ttf?t=1626160840759') format('truetype');
 }
 
 .ceui-font {
@@ -17,7 +17,7 @@
   content: "\e633";
 }
 
-.ceui-icon-sousuo:before {
+.ceui-icon-search:before {
   content: "\e669";
 }
 
@@ -38,11 +38,11 @@
 }
 
 .ceui-icon-arrow-down:before {
-  content: "\e687";
+  content: "\e8bf";
 }
 
 .ceui-icon-arrow-right:before {
-  content: "\e688";
+  content: "\e8be";
 }
 
 .ceui-icon-close:before {

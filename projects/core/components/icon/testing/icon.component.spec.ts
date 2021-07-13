@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { IconComponent } from '../icon.component';
+import { CeuiIconComponent } from '../icon.component';
 
 describe('IconComponent', () => {
-  let component: IconComponent;
-  let fixture: ComponentFixture<IconComponent>;
+  let component: CeuiIconComponent;
+  let fixture: ComponentFixture<CeuiIconComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconComponent ]
+      declarations: [ CeuiIconComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IconComponent);
+    fixture = TestBed.createComponent(CeuiIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

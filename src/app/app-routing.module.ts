@@ -59,10 +59,14 @@ const routes: Routes = [
     loadChildren: () => import('./modules/dialog/dialog.module').then(module => module.DialogModule),
   },
   {
-    path: '',
-    redirectTo: 'dialog',
-    pathMatch: 'full'
-  }
+    path: 'icon',
+    loadChildren: () => import('./modules/icon/icon.module').then(module => module.IconModule),
+  },
+  // {
+  //   path: '',
+  //   redirectTo: 'dialog',
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({

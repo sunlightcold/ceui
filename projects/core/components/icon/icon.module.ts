@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconComponent } from './icon.component';
+import { CeuiIconComponent } from './icon.component';
 
 @NgModule({
   declarations: [
-    IconComponent
+    CeuiIconComponent
   ],
   imports: [
     CommonModule,
   ],
+  exports: [
+    CeuiIconComponent,
+  ]
 })
 export class CeuiIconModule { }

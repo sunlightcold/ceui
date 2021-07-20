@@ -1,6 +1,12 @@
 
 @import '../../projects/core/styles/theme';
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 header {
   h1 {
     padding: 10px;
@@ -11,6 +17,8 @@ header {
 
 .content {
   display: flex;
+  flex: 1;
+  overflow: hidden;
 
   aside {
     color: $ceui-text-gray-color;
@@ -18,6 +26,8 @@ header {
       padding: 10px;
     }
     border-right: 1px solid #eee;
+    overflow: auto;
+    max-height: 100%;
   }
 
   main {

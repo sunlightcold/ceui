@@ -1,0 +1,9 @@
+<div class="img-wrapper">
+  <div class="img-list-wrapper">
+    <ceui-image *ngFor="let img of imgList"
+                [dataSrc]="img.src"></ceui-image>
+  </div>
+  <div class="img-list-wrapper">
+    <img ceuiImageLazy class="img-item" *ngFor="let img of imgList" [dataSrc]="img.src">
+  </div>
+</div>

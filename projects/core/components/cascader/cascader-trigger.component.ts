@@ -5,10 +5,10 @@ import {
   EventEmitter,
   Inject,
   Input,
-  Output,
+  Output
 } from '@angular/core';
-import { isLenArray, fallbackValue } from '@ceui/cdk/utils';
-import { BehaviorSubject, Subscription, combineLatest } from 'rxjs';
+import { isLenArray } from '@ceui/cdk/utils';
+import { BehaviorSubject, combineLatest, Subscription } from 'rxjs';
 
 export interface CascaderOption<T> {
   key: T;

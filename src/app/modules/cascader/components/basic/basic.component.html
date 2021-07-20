@@ -4,8 +4,6 @@
                [options]="options"
                [(ngModel)]="selected"
                (ngModelChange)="onNgModelChange($event)"></ceui-cascader>
-<div>
-  <p>
-    <button (click)="selected = ['1', '11', '111']">change</button>
-  </p>
-</div>
+
+<button ceui-full-button
+        (click)="selected = ['1', '11', '111']">change</button>

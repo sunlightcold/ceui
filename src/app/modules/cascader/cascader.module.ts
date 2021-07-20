@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CascaderRoutingModule } from './cascader-routing.module';
 import { BasicComponent } from './components/basic/basic.component';
 import { DemoComponent } from './pages/demo/demo.component';
-import { CeuiCascaderModule, CeuiFormFieldModule, CeuiInputModule } from '@ceui/core/components';
+import { CeuiButtonModule, CeuiCascaderModule, CeuiFormFieldModule, CeuiInputModule } from '@ceui/core/components';
 import { FormsModule } from '@angular/forms';
 import { CodeModule } from '@app/code';
 
@@ -18,6 +18,7 @@ import { CodeModule } from '@app/code';
     CeuiInputModule,
     FormsModule,
     CodeModule,
+    CeuiButtonModule,
   ]
 })
 export class CascaderModule { }

@@ -1,18 +1,20 @@
-<header>
-  <h1>
-    CeUI
-  </h1>
-</header>
-<div class="content">
-  <aside>
-    <h4>
-      组件列表
-    </h4>
-    <ceui-accordion menuType="embed"
-                    [data]="componentList"
-                    (itemChange)="onItemChange($event)"></ceui-accordion>
-  </aside>
-  <main>
-    <router-outlet></router-outlet>
-  </main>
+<div class="wrapper">
+  <header>
+    <h1>
+      CeUI
+    </h1>
+  </header>
+  <div class="content">
+    <aside>
+      <h4>
+        组件列表
+      </h4>
+      <ceui-accordion menuType="embed"
+                      [data]="componentList"
+                      (itemChange)="onItemChange($event)"></ceui-accordion>
+    </aside>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>

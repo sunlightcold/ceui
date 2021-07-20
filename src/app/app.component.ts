@@ -33,10 +33,17 @@ export class AppComponent {
           title: `Dialog 弹窗`,
           router: `dialog`,
         },
-
         {
           title: `Icon 图标`,
           router: `icon`,
+        },
+        {
+          title: `Image 图片`,
+          router: `image`,
+        },
+        {
+          title: `Loading 加载`,
+          router: `loading`,
         },
         {
           title: `Tabs 选项卡`,

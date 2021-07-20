@@ -1,0 +1,19 @@
+.img-wrapper {
+  height: 300px;
+  display: flex;
+
+  .img-list-wrapper {
+    overflow: auto;
+  }
+
+  img {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+
+  .ceui-image {
+    width: 100px;
+    padding-top: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+@use '../../styles/theme';
+
+:host {
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: theme.$ceui-box-shadow;
+  padding: 10px;
+}

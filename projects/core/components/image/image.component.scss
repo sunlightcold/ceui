@@ -1,0 +1,17 @@
+@use '../../styles/theme';
+
+:host {
+  &.ceui-image {
+    display: block;
+    background-color: theme.$ceui-disabled-bg;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}

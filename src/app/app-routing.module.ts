@@ -62,11 +62,19 @@ const routes: Routes = [
     path: 'icon',
     loadChildren: () => import('./modules/icon/icon.module').then(module => module.IconModule),
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'dialog',
-  //   pathMatch: 'full'
-  // }
+  {
+    path: 'loading',
+    loadChildren: () => import('./modules/loading/loading.module').then(module => module.LoadingModule),
+  },
+  {
+    path: 'image',
+    loadChildren: () => import('./modules/image/image.module').then(module => module.ImageModule),
+  },
+  {
+    path: '',
+    redirectTo: 'alert',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

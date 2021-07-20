@@ -1,0 +1,12 @@
+.img-list-wrapper {
+  height: 500px;
+  overflow: auto;
+  display: inline-block;
+
+  img {
+    display: block;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+  }
+}

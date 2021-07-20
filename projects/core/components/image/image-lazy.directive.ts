@@ -1,8 +1,8 @@
-import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 import { isPresent } from '@ceui/cdk/utils';
 
 @Directive()
-export class CeuiImageLazyBase implements OnInit {
+export class CeuiImageLazyBase {
   get hostElement() {
     return this._elementRef.nativeElement;
   }
@@ -11,7 +11,17 @@ export class CeuiImageLazyBase implements OnInit {
 
   @Input() threshold = 0;
 
-  @Input() dataSrc: string | undefined;
+  @Input()
+  get dataSrc() {
+    return this._dataSrc;
+  }
+  set dataSrc(dataSrc: string | undefined) {
+    if (dataSrc !== this._dataSrc) {
+      this._dataSrc = dataSrc;
+      this._lazyObserver();
+    }
+  }
+  private _dataSrc: string | undefined;
 
   @Input() rootMargin: string | undefined;
 
@@ -19,8 +29,8 @@ export class CeuiImageLazyBase implements OnInit {
 
   constructor(protected _elementRef: ElementRef<HTMLImageElement>, protected _renderer2: Renderer2) {}
 
-  ngOnInit() {
-    const observer: IntersectionObserver = new IntersectionObserver(this.getCallBack(), {
+  private _lazyObserver() {
+    const observer: IntersectionObserver = new IntersectionObserver(this._getCallBack(), {
       root: this.root as any,
       rootMargin: this.rootMargin,
       threshold: this.threshold,
@@ -28,7 +38,7 @@ export class CeuiImageLazyBase implements OnInit {
     observer.observe(this.hostElement);
   }
 
-  getCallBack() {
+  private _getCallBack() {
     return (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
       entries.forEach(item => {
         if (item.isIntersecting) {

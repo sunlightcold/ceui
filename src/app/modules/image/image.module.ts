@@ -5,9 +5,11 @@ import { CodeModule } from '@app/code';
 import { DemoComponent } from './pages/demo/demo.component';
 import { BasicComponent } from './components/basic/basic.component';
 import { CeuiImageModule } from '@ceui/core/components';
+import { InfoViewComponent } from './components/info-view/info-view.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
-  declarations: [DemoComponent, BasicComponent],
+  declarations: [DemoComponent, BasicComponent, InfoViewComponent, ErrorComponent],
   imports: [
     CommonModule,
     ImageRoutingModule,

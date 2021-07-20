@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="item-wrapper" *ngFor="let item of imgList">
+    <img class="item-avatar" ceuiImageLazy [dataSrc]="item.src" errorSrc="https://via.placeholder.com/100.webp">
+    <div class="item-info">
+      <div class="item-content">content</div>
+      <div class="item-describe">describe</div>
+    </div>
+  </div>
+</div>

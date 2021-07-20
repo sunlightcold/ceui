@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, Renderer2 } from '@angular/core';
 import { isPresent } from '@ceui/cdk/utils';
 import { CeuiImageLazyDirective } from './image-lazy.directive';
 
@@ -9,6 +9,7 @@ import { CeuiImageLazyDirective } from './image-lazy.directive';
   host: {
     class: `ceui-image`,
   },
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CeuiImageComponent extends CeuiImageLazyDirective {
   constructor(_elementRef: ElementRef<HTMLImageElement>, _renderer2: Renderer2) {

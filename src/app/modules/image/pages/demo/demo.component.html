@@ -1,9 +1,23 @@
 <div class="demo-container">
   <div class="demo-example">
-    <div class="demo-title">基础用法</div>
+    <div class="demo-title">图片懒加载</div>
     <div class="demo-text"></div>
     <app-code-container [sources]="basicSources">
       <app-basic></app-basic>
+    </app-code-container>    
+  </div>
+  <div class="demo-example">
+    <div class="demo-title">嵌套容器</div>
+    <div class="demo-text"></div>
+    <app-code-container [sources]="infoViewSources">
+      <app-info-view></app-info-view>
+    </app-code-container>    
+  </div>
+  <div class="demo-example">
+    <div class="demo-title">错误图片</div>
+    <div class="demo-text"></div>
+    <app-code-container [sources]="errorSource">
+      <app-error></app-error>
     </app-code-container>    
   </div>
 </div>

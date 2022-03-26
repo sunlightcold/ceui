@@ -11,8 +11,9 @@ describe('AlertComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiAlertComponent ]
-    })
+    declarations: [CeuiAlertComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

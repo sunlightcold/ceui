@@ -11,8 +11,9 @@ describe('InputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiInputComponent ]
-    })
+    declarations: [CeuiInputComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

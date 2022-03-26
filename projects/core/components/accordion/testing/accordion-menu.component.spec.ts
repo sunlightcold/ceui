@@ -11,8 +11,9 @@ describe('AccordionMenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccordionMenuComponent ]
-    })
+    declarations: [AccordionMenuComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

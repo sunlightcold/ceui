@@ -11,8 +11,9 @@ describe('TooltipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiTooltipComponent ]
-    })
+    declarations: [CeuiTooltipComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

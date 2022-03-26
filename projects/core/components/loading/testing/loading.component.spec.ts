@@ -11,8 +11,9 @@ describe('LoadingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiLoadingComponent ]
-    })
+    declarations: [CeuiLoadingComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

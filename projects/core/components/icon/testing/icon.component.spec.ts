@@ -11,8 +11,9 @@ describe('IconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiIconComponent ]
-    })
+    declarations: [CeuiIconComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

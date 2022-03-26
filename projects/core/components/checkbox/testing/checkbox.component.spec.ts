@@ -11,8 +11,9 @@ describe('CheckboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiCheckboxComponent ]
-    })
+    declarations: [CeuiCheckboxComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

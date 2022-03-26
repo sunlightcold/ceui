@@ -11,8 +11,9 @@ describe('CardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiCardComponent ]
-    })
+    declarations: [CeuiCardComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

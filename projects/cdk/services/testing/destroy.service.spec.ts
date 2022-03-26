@@ -6,8 +6,9 @@ import { DestroyService } from '../destroy.service';
 describe('Service: Destroy', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DestroyService]
-    });
+    providers: [DestroyService],
+    teardown: { destroyAfterEach: false }
+});
   });
 
   it('should ...', inject([DestroyService], (service: DestroyService) => {

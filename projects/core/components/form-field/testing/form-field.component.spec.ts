@@ -11,8 +11,9 @@ describe('FormFieldComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiFormFieldComponent ]
-    })
+    declarations: [CeuiFormFieldComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

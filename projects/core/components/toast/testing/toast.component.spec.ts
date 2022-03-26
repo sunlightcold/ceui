@@ -11,8 +11,9 @@ describe('ToastComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiToastComponent ]
-    })
+    declarations: [CeuiToastComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

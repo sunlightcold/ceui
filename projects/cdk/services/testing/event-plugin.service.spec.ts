@@ -6,8 +6,9 @@ import { CeuiEventPluginService } from '../event-plugin.service';
 describe('Service: OutZoneEventPlugin', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CeuiEventPluginService]
-    });
+    providers: [CeuiEventPluginService],
+    teardown: { destroyAfterEach: false }
+});
   });
 
   it('should ...', inject([CeuiEventPluginService], (service: CeuiEventPluginService) => {

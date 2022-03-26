@@ -11,8 +11,9 @@ describe('AccordionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccordionComponent ]
-    })
+    declarations: [AccordionComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

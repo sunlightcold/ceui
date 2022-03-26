@@ -11,8 +11,9 @@ describe('RadioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiRadioComponent ]
-    })
+    declarations: [CeuiRadioComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

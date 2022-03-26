@@ -11,8 +11,9 @@ describe('SidenavContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiSidenavContainerComponent ]
-    })
+    declarations: [CeuiSidenavContainerComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

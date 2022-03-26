@@ -6,8 +6,9 @@ import { CeuiSidenavService } from '../sidenav.service';
 describe('Service: Sidenav', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CeuiSidenavService]
-    });
+    providers: [CeuiSidenavService],
+    teardown: { destroyAfterEach: false }
+});
   });
 
   it('should ...', inject([CeuiSidenavService], (service: CeuiSidenavService) => {

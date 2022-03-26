@@ -11,8 +11,9 @@ describe('TabGroupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiTabGroupComponent ]
-    })
+    declarations: [CeuiTabGroupComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

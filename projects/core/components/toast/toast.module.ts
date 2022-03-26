@@ -5,18 +5,15 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { CeuiToastService } from './toast.service';
 
 @NgModule({
-  declarations: [
-    CeuiToastComponent,
-  ],
-  imports: [
-    CommonModule,
-    OverlayModule,
-  ],
-  entryComponents: [
-    CeuiToastComponent,
-  ],
-  providers: [
-    CeuiToastService,
-  ]
+    declarations: [
+        CeuiToastComponent,
+    ],
+    imports: [
+        CommonModule,
+        OverlayModule,
+    ],
+    providers: [
+        CeuiToastService,
+    ]
 })
 export class CeuiToastModule { }

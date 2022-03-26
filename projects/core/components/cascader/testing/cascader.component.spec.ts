@@ -11,8 +11,9 @@ describe('CascaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiCascaderComponent ]
-    })
+    declarations: [CeuiCascaderComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

@@ -11,8 +11,9 @@ describe('ImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CeuiImageComponent ]
-    })
+    declarations: [CeuiImageComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

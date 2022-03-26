@@ -11,8 +11,9 @@ describe('ButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
-    })
+    declarations: [ButtonComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

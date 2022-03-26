@@ -11,8 +11,9 @@ describe('HintComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HintComponent ]
-    })
+    declarations: [HintComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   }));
 

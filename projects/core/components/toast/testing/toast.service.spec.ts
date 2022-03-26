@@ -6,8 +6,9 @@ import { CeuiToastService } from '../toast.service';
 describe('Service: Toast', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CeuiToastService]
-    });
+    providers: [CeuiToastService],
+    teardown: { destroyAfterEach: false }
+});
   });
 
   it('should ...', inject([CeuiToastService], (service: CeuiToastService) => {

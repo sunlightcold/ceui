@@ -2,9 +2,9 @@
 
 <ng-template #accordionMenu let-parent="parent" let-data="data" let-depth="depth">
   <ceui-accordion-item [data]="data" [parent]="parent" [depth]="depth"></ceui-accordion-item>
-  <ul *ngIf="data.isExpand" [ngStyle]="{ textIndent: 10 * depth + 10 + 'px' }">
+  <ul *ngIf="data.isExpand" [ngStyle]="{ textIndent: 10 * depth + 10 + 'px' }" @collapseState>
     <li *ngFor="let item of data?.children">
-      <ng-container  *ngTemplateOutlet="accordionMenu; context: { parent: data, data: item, depth: depth + 1 } "></ng-container>
+      <ng-container *ngTemplateOutlet="accordionMenu; context: { parent: data, data: item, depth: depth + 1 } "></ng-container>
     </li>
   </ul>
 </ng-template>

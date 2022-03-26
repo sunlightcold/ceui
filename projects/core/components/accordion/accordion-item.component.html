@@ -2,12 +2,8 @@
      [class.active]="active"
      [class.disabled]="disabled">
   <div *ngIf="data?.children"
-       class="ceui-accordion-expand">
-    <i *ngIf="isExpand; else close"
-       class="ceui-font ceui-icon-arrow-up"></i>
-    <ng-template #close>
-      <i class="ceui-font ceui-icon-arrow-down"></i>
-    </ng-template>
+       class="ceui-accordion-expand" [@indicatorRotate]="isExpand ? 'expanded' : 'collapsed'">
+    <i class="ceui-font ceui-icon-arrow-down"></i>
   </div>
   {{ data?.title }}
 </div>

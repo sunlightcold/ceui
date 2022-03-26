@@ -32,6 +32,7 @@
   .ceui-accordion-expand {
     position: absolute;
     right: 10px;
+    text-indent: 0;
     > i {
       font-size: $ceui-font-size-sm;
     }

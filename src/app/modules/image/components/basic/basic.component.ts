@@ -35,3 +35,4 @@ export class BasicComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {}
 }
+

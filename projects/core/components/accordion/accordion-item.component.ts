@@ -1,4 +1,11 @@
 import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
+import {
   Component,
   HostBinding,
   HostListener,
@@ -8,7 +15,6 @@ import {
   SimpleChanges,
   ViewEncapsulation,
 } from '@angular/core';
-import { threadId } from 'worker_threads';
 import { AccordionComponent } from './accordion.component';
 import {
   CeuiAccordionItemChange,
@@ -20,6 +26,16 @@ import {
   templateUrl: './accordion-item.component.html',
   styleUrls: ['./accordion-item.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  animations: [
+    trigger('indicatorRotate', [
+      state('collapsed, void', style({ transform: 'rotate(0deg)' })),
+      state('expanded', style({ transform: 'rotate(180deg)' })),
+      transition(
+        'expanded <=> collapsed, void => collapsed',
+        animate('225ms cubic-bezier(0.4,0.0,0.2,1)')
+      ),
+    ]),
+  ],
 })
 export class AccordionItemComponent implements OnInit, OnChanges {
   get disabled() {
@@ -82,12 +98,14 @@ export class AccordionItemComponent implements OnInit, OnChanges {
       this.accordion.openMenu(this.data, !this.data.isExpand);
     }
     this.accordion.menuToggle.emit(
-      new CeuiAccordionMenuToggle(this.parent, this.data, !!this.isExpand),
+      new CeuiAccordionMenuToggle(this.parent, this.data, !!this.isExpand)
     );
   }
 
   itemChangeFn() {
-    this.accordion.itemChange.emit(new CeuiAccordionItemChange(this.parent, this.data));
+    this.accordion.itemChange.emit(
+      new CeuiAccordionItemChange(this.parent, this.data)
+    );
   }
 
   itemActive(item: CeuiAccordionOption) {
